@@ -1,0 +1,16 @@
+
+.aboutus {
+ display: block;
+ position: relative;
+ top: -2px;
+ height: 200px;
+ background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1333 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink%22%3E<path fill="rgba(47, 73, 94, 1)" d="M 0 0 C 49.5 0 49.5 76 99 76 L 99 76 L 99 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(47, 73, 94, 1)" d="M 98 76 C 167 76 167 38 236 38 L 236 38 L 236 0 L 98 0 Z" stroke-width="0"></path> <path fill="rgba(47, 73, 94, 1)" d="M 235 38 C 308 38 308 82 381 82 L 381 82 L 381 0 L 235 0 Z" stroke-width="0"></path><path fill="rgba(47, 73, 94, 1)" d="M 380 82 C 481.5 82 481.5 62 583 62 L 583 62 L 583 0 L 380 0 Z" stroke-width="0"></path><path fill="rgba(47, 73, 94, 1)" d="M 582 62 C 690 62 690 118 798 118 L 798 118 L 798 0 L 582 0 Z" stroke-width="0"></path><path fill="rgba(47, 73, 94, 1)" d="M 797 118 C 862 118 862 75 927 75 L 927 75 L 927 0 L 797 0 Z" stroke-width="0"></path><path fill="rgba(47, 73, 94, 1)" d="M 926 75 C 1048.5 75 1048.5 125 1171 125 L 1171 125 L 1171 0 L 926 0 Z" stroke-width="0"></path><path fill="rgba(47, 73, 94, 1)" d="M 1170 125 C 1259.5 125 1259.5 0 1349 0 L 1349 0 L 1349 0 L 1170 0 Z" stroke-width="0"></path></svg>');
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+@media (max-width:1332px) {
+ .div {
+   background-size: contain;
+ }
+}
