@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  height:100%;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Homepage */
+.Homepage{
+  background: #284f92;
+  background-image:
+  url("./images/combined.png");
+  position: relative;
+  background-position: left;
+  background-repeat: no-repeat;
+
+}
+
+.link-homepage-text{
+  display: flex;
+  margin-left: 75%;
+
+  color:white;
+  height: 3.75em;
+  font-size: 1.5em;
+  font-family:sans-serif;
+
+
+
+}
+
+.links_homepage{
+  position: relative;
+  right:0%;
+  margin-top: 10%;
+  margin-right: 2.125em;
+}
+
+.Facebook-logo{
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 50%;
+  height:3.125em;
+  width: 3.125em;
+  position: absolute;
+  bottom: 3.125em;
+  right: 3.125em;
+}
+
+.content-homepage{
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  width: 30em;
+  height: 15em;
+  margin:0em;
+  border:none;
+}
+
+
+.description{
+  text-align: left;
+  position: relative;
+  bottom:20%;
+  left:0%;
+  color:#94ddde;
+  font-weight: lighter;
+
+  font-family:sans-serif;
+
+
+  border:none;
+  margin-left : 0.33em;
+
+  font-size: 2em;
+  height: 3em;
+  width: 20em;
+}
+
+
+
+.main-heading-homepage{
+  text-align: left;
+  position: relative;
+
+  top:30%;
+  left:0%;
+
+  text-align: left;
+  font-size: 5em;
+  color:#f7b4a7;
+  font-family:sans-serif;
+
+}
+
+
+  a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
+
+
+
+@media screen and (orientation:portrait) {
+  .Homepage{
+    background: #284f92;
+
+    background-position: left;
+
+    background-repeat: no-repeat;
+
+    background-image:
+    url("./images/combined.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:bottom left;
+    background-size: 100em;
+
+
+  }
+
+
+}
