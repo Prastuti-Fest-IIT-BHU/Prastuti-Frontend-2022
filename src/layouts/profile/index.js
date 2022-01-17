@@ -51,7 +51,7 @@ function Overview() {
 
 
         <MDBox pt={2} px={2} lineHeight={0.5}>
-          <MDTypography variant="h6" fontWeight='bold'>
+          <MDTypography variant="h6" fontWeight='bold' color="light">
             @PRASTUTI
           </MDTypography>
         </MDBox>
