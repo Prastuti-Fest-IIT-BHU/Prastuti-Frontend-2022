@@ -22,7 +22,7 @@ function CompetitionCard({ image, label, title, description, action}) {
     < div style={{ display:'flex', justifyContent:'center' }}>
     <Card
       sx={{
-       
+
         display: "flex",
         flexDirection: `${displayType}`,
         backgroundColor: "transparent",
@@ -35,14 +35,14 @@ function CompetitionCard({ image, label, title, description, action}) {
           component="img"
           title={title}
           sx={{
-            maxWidth: "50%",
+            maxWidth: "55%",
             margin: 2,
             boxShadow: ({ boxShadows: { md } }) => md,
             objectFit: "cover",
             objectPosition: "center",
           }}
         />
-      <MDBox mt={1} mx={0.5}>
+      <MDBox mt={1} mx={0.5} p={2}>
         <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
           {label}
         </MDTypography>
@@ -69,10 +69,11 @@ function CompetitionCard({ image, label, title, description, action}) {
             </MDTypography>
           )}
         </MDBox>
-        <MDBox mb={3} lineHeight={0} >
-          <MDTypography variant="button" fontWeight="light" color="text">
+        <MDBox mb={3} lineHeight={0} py={2}>
+          <MDTypography variant="button" fontWeight="light" color="text" >
             {description}
           </MDTypography>
+          <MDBox py={2}>
             <MDButton
               component="a"
               target="_blank"
@@ -81,9 +82,11 @@ function CompetitionCard({ image, label, title, description, action}) {
               variant="outlined"
               size="small"
               href={action.route}
+              py={2}
             >
               Learn More
             </MDButton>
+            </MDBox>
         </MDBox>
       </MDBox>
     </Card>
