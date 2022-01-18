@@ -27,6 +27,8 @@ function Tables() {
       <MDBox>
        <PositionedMenu />
       </MDBox>
+
+
       <MDBox pt={6} pb={3}>
         <Grid container spacing={6}>
           <Grid item xs={12}>
@@ -59,7 +61,6 @@ function Tables() {
 
 
           <Grid item xs={12}>
-
             <Card>
               <MDBox
                 mx={2}

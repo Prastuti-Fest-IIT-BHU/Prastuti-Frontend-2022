@@ -4,28 +4,31 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+
 import useWindowDimensions from "hooks/useWindowDimensions";
 
 function CompetitionCard({ image, label, title, description, action}) {
   const { width } = useWindowDimensions();
   let displayType
+  let imgw
   if(width<1096 )
   {
     displayType="column"
+    imgw="100%"
   }
   else
   {
     displayType="row"
+    imgw="55%"
   }
   return (
-    < div style={{ display:'flex', justifyContent:'center' }}>
+    < div style={{ display:'flex', justifyContent:'left' }}>
     <Card
       sx={{
 
         display: "flex",
         flexDirection: `${displayType}`,
-        backgroundColor: "transparent",
+        backgroundColor: "#e6f7ff",
         boxShadow: "none",
         overflow: "visible",
       }}
@@ -35,7 +38,7 @@ function CompetitionCard({ image, label, title, description, action}) {
           component="img"
           title={title}
           sx={{
-            maxWidth: "55%",
+            maxWidth: `${imgw}`,
             margin: 2,
             boxShadow: ({ boxShadows: { md } }) => md,
             objectFit: "cover",
@@ -43,15 +46,13 @@ function CompetitionCard({ image, label, title, description, action}) {
           }}
         />
       <MDBox mt={1} mx={0.5} p={2}>
-        <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
-          {label}
-        </MDTypography>
+
         <MDBox mb={1}>
           {action.type === "internal" ? (
             <MDTypography
               component={Link}
               to={action.route}
-              variant="h5"
+              variant="h4"
               textTransform="capitalize"
             >
               {title}
@@ -69,25 +70,18 @@ function CompetitionCard({ image, label, title, description, action}) {
             </MDTypography>
           )}
         </MDBox>
+        <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
+          {label}
+        </MDTypography>
         <MDBox mb={3} lineHeight={0} py={2}>
-          <MDTypography variant="button" fontWeight="light" color="text" >
-            {description}
-          </MDTypography>
-          <MDBox py={2}>
-            <MDButton
-              component="a"
-              target="_blank"
-              color={action.color}
-              rel="noreferrer"
-              variant="outlined"
-              size="small"
-              href={action.route}
-              py={2}
-            >
-              Learn More
-            </MDButton>
-            </MDBox>
+          <MDTypography variant="button" fontWeight="normal" color="text" >
+            {description}...   </MDTypography><MDTypography variant="button" fontWeight="bold" color="text" >Learn More  </MDTypography>
+
         </MDBox>
+          <MDBox mb={3} lineHeight={0} py={2}>
+          <MDTypography variant="h5" fontWeight="bold" color="text" >
+            Participants: 420 </MDTypography>
+          </MDBox>
       </MDBox>
     </Card>
     </div>
