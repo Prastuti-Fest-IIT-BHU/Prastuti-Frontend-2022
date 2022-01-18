@@ -1,6 +1,7 @@
  // prettier-ignore
 // react-router-dom components
 import { Link } from "react-router-dom";
+import Box from '@material-ui/core/Box';
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
@@ -8,7 +9,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-
+import useWindowDimensions from "hooks/useWindowDimensions";
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
@@ -18,19 +19,34 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 function DefaultProjectCard({ image, title, description, action }) {
 
+  const { width } = useWindowDimensions();
+  let PaddingLeft
+  let MarginPhone
+  if(width<1196 )
+  {
+    PaddingLeft="5%"
+    MarginPhone="1"
+  }
+  else
+  {
+    PaddingLeft="21%"
+  }
+
   return (
     <>
 <DashboardNavbar/>
 <div style={{ display:'flex', justifyContent:'center' }}>
+<Box  sx={{
+  ml: `${PaddingLeft}`,  mr: `${MarginPhone}`
+}} >
     <Card
       sx={{
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "transparent",
+        backgroundColor: "#e6f7ff",
         boxShadow: "none",
         overflow: "visible",
-        maxWidth: "50%",
-
+        maxWidth: "98%",
       }}
     >
         <CardMedia
@@ -38,13 +54,13 @@ function DefaultProjectCard({ image, title, description, action }) {
           component="img"
           title={title}
           sx={{
-            maxWidth: "50%",
-            margin: 2,
-            marginLeft: 30,
-            marginRight:30,
+            maxWidth: "95%",
+            margin: 5,
+            marginLeft: 20,
+            marginRight:20,
             boxShadow: ({ boxShadows: { md } }) => md,
             justifyContent: "center",
-            display:"flex", 
+            display:"flex",
             // objectFit: "cover",
             objectPosition: "center",
           }}
@@ -74,6 +90,22 @@ function DefaultProjectCard({ image, title, description, action }) {
             {description}
           </MDTypography>
         </MDBox>
+        <MDBox mb={1} lineHeight={0} justifyContent="center" sx={{
+          marginLeft: 3,
+          marginRight:3,
+        }}>
+          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+            Coordinators:
+          </MDTypography>
+        </MDBox>
+        <MDBox   mb={0.5} lineHeight={0} justifyContent="center" sx={{
+          marginLeft: 5,
+          marginRight:3,
+        }}>
+          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+            Coordinator name ;    04045300
+          </MDTypography>
+        </MDBox>
 
 <div style={{ display:'flex', justifyContent:'center' }}>
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
@@ -96,6 +128,7 @@ function DefaultProjectCard({ image, title, description, action }) {
 
       </MDBox>
     </Card>
+    </Box>
   </div>
     </>
   );

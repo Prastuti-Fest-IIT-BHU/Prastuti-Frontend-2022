@@ -7,7 +7,7 @@ import Card from "@mui/material/Card";
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-
+import PositionedMenu from "examples/Menu/Menu";
 // Prastuti  2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
@@ -24,6 +24,11 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <MDBox>
+       <PositionedMenu />
+      </MDBox>
+
+
       <MDBox pt={6} pb={3}>
         <Grid container spacing={6}>
           <Grid item xs={12}>
@@ -56,7 +61,6 @@ function Tables() {
 
 
           <Grid item xs={12}>
-
             <Card>
               <MDBox
                 mx={2}

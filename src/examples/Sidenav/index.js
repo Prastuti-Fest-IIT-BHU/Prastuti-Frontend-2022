@@ -41,7 +41,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       setWhiteSidenav(dispatch, window.innerWidth < 1200 ? false : whiteSidenav);
     }
 
-    /** 
+    /**
      The event listener that's calling the handleMiniSidenav function when resizing the window.
     */
     window.addEventListener("resize", handleMiniSidenav);
