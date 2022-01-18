@@ -53,7 +53,10 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
+
+
           <Grid item xs={12}>
+
             <Card>
               <MDBox
                 mx={2}
@@ -61,11 +64,11 @@ function Tables() {
                 py={3}
                 px={2}
                 variant="gradient"
-                bgColor="info"
+                bgColor="success"
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
+                <MDTypography variant="h6" color="white" >
                   Event 1 Leaderboard
                 </MDTypography>
               </MDBox>
@@ -79,6 +82,8 @@ function Tables() {
                 />
               </MDBox>
             </Card>
+
+
           </Grid>
 
         </Grid>
