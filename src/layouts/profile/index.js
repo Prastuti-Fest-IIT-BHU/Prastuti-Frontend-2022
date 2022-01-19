@@ -13,6 +13,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 import ProfilesList from "examples/Lists/ProfilesList";
 
+import Tilt from 'react-tilt';
 
 // Overview page components
 import Header from "layouts/profile/components/Header";
@@ -30,7 +31,9 @@ function Overview() {
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox mb={2} />
+            <Tilt className="Tilt" options={{ max : 4,   scale:1.02, }} >
       <Header>
+
         <MDBox mt={5} mb={3}>
           <Grid container spacing={1}>
             <Grid item xs={12} md={6} xl={6}>
@@ -45,18 +48,19 @@ function Overview() {
           </Grid>
 
 
-
         </MDBox>
-
 
 
         <MDBox pt={2} px={2} lineHeight={0.5}>
           <MDTypography variant="h6" fontWeight='bold' color="light">
             @PRASTUTI
           </MDTypography>
+
         </MDBox>
 
       </Header>
+
+        </Tilt>
 
     </DashboardLayout>
   );
