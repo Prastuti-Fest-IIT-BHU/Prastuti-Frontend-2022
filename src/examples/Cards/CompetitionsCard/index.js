@@ -19,7 +19,7 @@ function CompetitionCard({ image, label, title, description, action}) {
   else
   {
     displayType="row"
-    imgw="55%"
+    imgw="45%"
   }
   return (
     < div style={{ display:'flex', justifyContent:'left' }}>
@@ -52,7 +52,7 @@ function CompetitionCard({ image, label, title, description, action}) {
             <MDTypography
               component={Link}
               to={action.route}
-              variant="h4"
+              variant="h3"
               textTransform="capitalize"
             >
               {title}
@@ -75,7 +75,8 @@ function CompetitionCard({ image, label, title, description, action}) {
         </MDTypography>
         <MDBox mb={3} lineHeight={0} py={2}>
           <MDTypography variant="button" fontWeight="normal" color="text" >
-            {description}...   </MDTypography><MDTypography variant="button" fontWeight="bold" color="text" >Learn More  </MDTypography>
+            {description}...   </MDTypography>
+            <MDTypography variant="button" fontWeight="bold" color="text" ><Link to= "/codigo">Learn More </Link> </MDTypography>
 
         </MDBox>
           <MDBox mb={3} lineHeight={0} py={2}>

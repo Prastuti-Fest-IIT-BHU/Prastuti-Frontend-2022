@@ -1,8 +1,6 @@
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
-import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
-import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
 import Icon from "@mui/material/Icon";
 import TeamRegister from "layouts/register/teamRegister";
@@ -13,27 +11,19 @@ import Codigo from "layouts/competitions/codigo";
 const routes = [
   {
     type: "collapse",
-    name: "Dashboard",
-    key: "dashboard",
+    name: "Events",
+    key: "events",
     icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
+    route: "/events",
     component: <Dashboard />,
   },
   {
     type: "collapse",
-    name: "Tables",
-    key: "tables",
+    name: "Leaderboards",
+    key: "leaderboards",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
+    route: "/leaderboards",
     component: <Tables />,
-  },
-  {
-    type: "collapse",
-    name: "Notifications",
-    key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
-    component: <Notifications />,
   },
   {
     type: "collapse",
@@ -45,17 +35,17 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign In",
-    key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
-    route: "/authentication/sign-in",
-    component: <SignIn />,
+    name: "Team",
+    key: "sign-up",
+    icon: <Icon fontSize="small">group_icon</Icon>,
+    route: "/authentication/sign-up",
+    component: <SignUp />,
   },
   {
     type: "collapse",
-    name: "Sign Up",
+    name: "Sign Out",
     key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
+    icon: <Icon fontSize="small">meeting_room</Icon>,
     route: "/authentication/sign-up",
     component: <SignUp />,
   },
