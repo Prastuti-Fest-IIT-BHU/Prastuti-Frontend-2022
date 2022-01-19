@@ -32,7 +32,7 @@ function CompetitionCard({ image, label, title, description, action}) {
 
         display: "flex",
         flexDirection: `${displayType}`,
-        backgroundColor: "#e6f7ff",
+        backgroundColor: "#ffff",
         boxShadow: "none",
         overflow: "visible",
       }}

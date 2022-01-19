@@ -18,16 +18,19 @@ export default {
   transparent: {
     main: "transparent",
   },
-
+  leader: {
+    main:"#252525",
+    focus:"#252525",
+  },
   white: {
     main: "#ffffff",
     focus: "#ffffff",
   },
 
   black: {
-    light: "#000000",
-    main: "#000000",
-    focus: "#000000",
+    light: "#252525",
+    main: "#252525",
+    focus: "#252525",
   },
 
   primary: {
@@ -87,7 +90,10 @@ export default {
       main: "#EC407A",
       state: "#D81B60",
     },
-
+    leader: {
+      main: "#252525",
+      state: "#252525",
+    },
     secondary: {
       main: "#747b8a",
       state: "#495361",
@@ -119,8 +125,8 @@ export default {
     },
 
     dark: {
-      main: "#42424a",
-      state: "#191919",
+      main: "#252525",
+      state: "#3c3c3c",
     },
   },
 
