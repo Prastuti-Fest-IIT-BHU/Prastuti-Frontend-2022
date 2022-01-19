@@ -7,6 +7,7 @@ import TeamRegister from "layouts/register/teamRegister";
 import CreateTeam from "layouts/register/createTeam";
 import JoinTeam from "layouts/register/joinTeam";
 import Codigo from "layouts/competitions/codigo";
+import DevCard from "examples/Cards/Fluidcard/Fluidcard";
 
 const routes = [
   {
@@ -36,10 +37,10 @@ const routes = [
   {
     type: "collapse",
     name: "Core Team",
-    key: "sign-up",
+    key: "dev",
     icon: <Icon fontSize="small">group_icon</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
+    route: "/dev",
+    component: <DevCard />,
   },
   {
     type: "collapse",
