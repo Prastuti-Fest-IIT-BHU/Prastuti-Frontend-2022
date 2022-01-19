@@ -27,7 +27,7 @@ function Tables() {
     const [eventClassname, setEventClassname] = React.useState("Event 1");
 
 
-  
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -44,55 +44,6 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox>
-
-<div>
-      <Button
-        id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        Select
-      </Button>
-      <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-      >
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Event 3");
-          }}>Event 3</MenuItem>
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Event 1");
-          }}>Event 1</MenuItem>
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Event 2");
-          }}>Event 2</MenuItem>
-          <MenuItem onClick={handleClose}>Event 3</MenuItem>
-          <MenuItem onClick={handleClose}>Event 1</MenuItem>
-          <MenuItem onClick={handleClose}>Event 2</MenuItem>
-          <MenuItem onClick={handleClose}>Event 3</MenuItem>
-      </Menu>
-    </div>
-
-
-
-      </MDBox>
 
 
       <MDBox pt={6} pb={3}>
@@ -124,11 +75,56 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
+          <MDBox>
 
-          {
+  <MDBox mt={3} px={5}>
+          <Button
+            id="demo-positioned-button"
+            aria-controls={open ? 'demo-positioned-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+          >
+            Select
+          </Button>
+          <Menu
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+          >
+              <MenuItem onClick={()=>{
+                handleClose();
+                handleClass("Event 3");
+              }}>Event 3</MenuItem>
+              <MenuItem onClick={()=>{
+                handleClose();
+                handleClass("Event 1");
+              }}>Event 1</MenuItem>
+              <MenuItem onClick={()=>{
+                handleClose();
+                handleClass("Event 2");
+              }}>Event 2</MenuItem>
+              <MenuItem onClick={handleClose}>Event 3</MenuItem>
+              <MenuItem onClick={handleClose}>Event 1</MenuItem>
+              <MenuItem onClick={handleClose}>Event 2</MenuItem>
+              <MenuItem onClick={handleClose}>Event 3</MenuItem>
+          </Menu>
+        </MDBox>
 
 
-          }
+
+          </MDBox>
+
 
           <Grid item xs={12}>
             <Card>
