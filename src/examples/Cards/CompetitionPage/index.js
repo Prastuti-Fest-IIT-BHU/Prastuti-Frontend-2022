@@ -41,7 +41,7 @@ function DefaultProjectCard({ image, title, description, action }) {
 
 <div style={{ display:'flex', justifyContent:'center' }}>
 <Box  sx={{
-  ml: `${PaddingLeft}`,  mr: `${MarginPhone}`
+  ml: `${PaddingLeft}`,  mr: `${MarginPhone}`, mb:3,
 }} ><DashboardNavbar/>
     <Card
       sx={{
@@ -113,7 +113,7 @@ function DefaultProjectCard({ image, title, description, action }) {
 
 <div style={{ display:'flex', justifyContent:'center' }}>
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
-          gap:2,
+          gap:2, mb:3,
         }}>
             <MDButton
               component={Link}
