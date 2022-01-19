@@ -22,7 +22,7 @@ export default function PositionedMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Leaderboards
+        Select
       </Button>
       <Menu
         id="demo-positioned-menu"
@@ -39,9 +39,13 @@ export default function PositionedMenu() {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>event1</MenuItem>
-        <MenuItem onClick={handleClose}>event2</MenuItem>
-        <MenuItem onClick={handleClose}>event3</MenuItem>
+          <MenuItem onClick={handleClose}>event3</MenuItem>
+          <MenuItem onClick={handleClose}>event1</MenuItem>
+          <MenuItem onClick={handleClose}>event2</MenuItem>
+          <MenuItem onClick={handleClose}>event3</MenuItem>
+          <MenuItem onClick={handleClose}>event1</MenuItem>
+          <MenuItem onClick={handleClose}>event2</MenuItem>
+          <MenuItem onClick={handleClose}>event3</MenuItem>
       </Menu>
     </div>
   );

@@ -12,17 +12,17 @@ const routes = [
   {
     type: "collapse",
     name: "Events",
-    key: "dashboard",
+    key: "events",
     icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
+    route: "/events",
     component: <Dashboard />,
   },
   {
     type: "collapse",
     name: "Leaderboards",
-    key: "tables",
+    key: "leaderboards",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
+    route: "/leaderboards",
     component: <Tables />,
   },
   {
