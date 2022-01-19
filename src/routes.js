@@ -35,7 +35,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Team",
+    name: "Core Team",
     key: "sign-up",
     icon: <Icon fontSize="small">group_icon</Icon>,
     route: "/authentication/sign-up",

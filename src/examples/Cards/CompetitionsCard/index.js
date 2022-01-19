@@ -4,6 +4,8 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import Tilt from 'react-tilt';
+
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 
@@ -23,6 +25,8 @@ function CompetitionCard({ image, label, title, description, action}) {
   }
   return (
     < div style={{ display:'flex', justifyContent:'left' }}>
+    <Tilt className="Tilt" options={{ max : 6,  scale: 1.01,  }} >
+
     <Card
       sx={{
 
@@ -85,6 +89,7 @@ function CompetitionCard({ image, label, title, description, action}) {
           </MDBox>
       </MDBox>
     </Card>
+    </Tilt>
     </div>
   );
 }
