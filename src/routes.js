@@ -15,7 +15,7 @@ const routes = [
     name: "Events",
     key: "events",
     icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
+    route: "/events",
     component: <Dashboard />,
   },
   {
