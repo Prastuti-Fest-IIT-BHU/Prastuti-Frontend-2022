@@ -3,11 +3,14 @@
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import PositionedMenu from "examples/Menu/Menu";
+// import PositionedMenu from "examples/Menu/Menu";
 // Prastuti  2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
@@ -20,13 +23,27 @@ import projectsTableData from "layouts/tables/data/projectsTableData";
 function Tables() {
   const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [eventClassname, setEventClassname] = React.useState("Event 1");
+
+
+
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleClass=(className)=>{
+    setEventClassname(className);
+  }
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox>
-       <PositionedMenu />
-      </MDBox>
 
 
       <MDBox pt={6} pb={3}>
@@ -58,6 +75,55 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
+          <MDBox>
+
+  <MDBox mt={3} px={5}>
+          <Button
+            id="demo-positioned-button"
+            aria-controls={open ? 'demo-positioned-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+          >
+            Select
+          </Button>
+          <Menu
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+          >
+              <MenuItem onClick={()=>{
+                handleClose();
+                handleClass("Event 3");
+              }}>Event 3</MenuItem>
+              <MenuItem onClick={()=>{
+                handleClose();
+                handleClass("Event 1");
+              }}>Event 1</MenuItem>
+              <MenuItem onClick={()=>{
+                handleClose();
+                handleClass("Event 2");
+              }}>Event 2</MenuItem>
+              <MenuItem onClick={handleClose}>Event 3</MenuItem>
+              <MenuItem onClick={handleClose}>Event 1</MenuItem>
+              <MenuItem onClick={handleClose}>Event 2</MenuItem>
+              <MenuItem onClick={handleClose}>Event 3</MenuItem>
+          </Menu>
+        </MDBox>
+
+
+
+          </MDBox>
 
 
           <Grid item xs={12}>
@@ -71,9 +137,10 @@ function Tables() {
                 bgColor="success"
                 borderRadius="lg"
                 coloredShadow="info"
+                className={eventClassname}
               >
                 <MDTypography variant="h6" color="white" >
-                  Event 1 Leaderboard
+                  {eventClassname} Leaderboard
                 </MDTypography>
               </MDBox>
               <MDBox pt={2}>

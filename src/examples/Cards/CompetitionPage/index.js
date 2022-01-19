@@ -2,6 +2,7 @@
 // react-router-dom components
 import { Link } from "react-router-dom";
 import Box from '@material-ui/core/Box';
+import Tilt from 'react-tilt';
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
@@ -53,6 +54,8 @@ function DefaultProjectCard({ image, title, description, action }) {
         maxWidth: "98%",
       }}
     >
+
+
         <CardMedia
           src={image}
           component="img"
@@ -69,8 +72,11 @@ function DefaultProjectCard({ image, title, description, action }) {
             objectPosition: "center",
           }}
         />
+
       <MDBox mt={1} mx={0.5} justifyContent="center">
 <div style={{ display:'flex', justifyContent:'center' }}>
+
+    <Tilt className="Tilt" options={{ max : 25, scale: 2}}>
         <MDBox mb={1}>
             <MDTypography
               component="a"
@@ -85,6 +91,7 @@ function DefaultProjectCard({ image, title, description, action }) {
             </MDTypography>
 
         </MDBox>
+      </Tilt>
         </div>
         <MDBox mb={3} lineHeight={0} justifyContent="center" sx={{
           marginLeft: 3,
@@ -112,6 +119,7 @@ function DefaultProjectCard({ image, title, description, action }) {
         </MDBox>
 
 <div style={{ display:'flex', justifyContent:'center' }}>
+  <Tilt className="Tilt" options={{ max : 25, scale: 1.2}}>
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
           gap:2, mb:3,
         }}>
@@ -129,6 +137,7 @@ function DefaultProjectCard({ image, title, description, action }) {
               Register
             </MDButton>
         </MDBox>
+        </Tilt>
 </div>
 
       </MDBox>

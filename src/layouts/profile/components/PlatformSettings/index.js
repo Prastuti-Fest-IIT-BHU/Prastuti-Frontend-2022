@@ -5,7 +5,6 @@
 // @mui material components
 import Card from "@mui/material/Card";
 
-
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
@@ -15,6 +14,7 @@ function PlatformSettings() {
 
 
   return (
+
     <Card sx={{ boxShadow: "none" }}>
       <MDBox p={2}>
         <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize"  color ="error" textGradient>
@@ -82,6 +82,7 @@ function PlatformSettings() {
 
             </MDBox>
     </Card>
+
   );
 }
 
