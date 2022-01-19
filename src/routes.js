@@ -7,6 +7,7 @@ import TeamRegister from "layouts/register/teamRegister";
 import CreateTeam from "layouts/register/createTeam";
 import JoinTeam from "layouts/register/joinTeam";
 import Codigo from "layouts/competitions/codigo";
+import CoreTeam from "layouts/core/coreteam";
 
 const routes = [
   {
@@ -14,7 +15,7 @@ const routes = [
     name: "Events",
     key: "events",
     icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
+    route: "/events",
     component: <Dashboard />,
   },
   {
@@ -36,10 +37,10 @@ const routes = [
   {
     type: "collapse",
     name: "Core Team",
-    key: "sign-up",
+    key: "dev",
     icon: <Icon fontSize="small">group_icon</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
+    route: "/dev",
+    component: <CoreTeam />,
   },
   {
     type: "collapse",

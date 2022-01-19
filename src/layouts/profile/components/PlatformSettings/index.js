@@ -17,12 +17,12 @@ function PlatformSettings() {
 
     <Card sx={{ boxShadow: "none" }}>
       <MDBox p={2}>
-        <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize"  color ="error" textGradient>
+        <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize"  color ="text" textGradient>
           Registered in:
         </MDTypography>
       </MDBox>
       <MDBox py={1} px={5} lineHeight={0.2}>
-        <MDTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
+        <MDTypography variant="caption" fontWeight="600" color="text" textTransform="uppercase">
           Event Name
         </MDTypography>
 
@@ -47,7 +47,7 @@ function PlatformSettings() {
       </MDBox>
 
         <MDBox p={2}>
-          <MDTypography variant="h5" fontWeight="bold" textTransform="capitalize"  color="success" textGradient>
+          <MDTypography variant="h5" fontWeight="bold" textTransform="capitalize"  color="text" textGradient>
             Teams:
           </MDTypography>
         </MDBox>
