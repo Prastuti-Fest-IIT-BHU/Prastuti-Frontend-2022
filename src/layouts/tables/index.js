@@ -1,4 +1,5 @@
 
+import Tilt from 'react-tilt';
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -37,15 +38,18 @@ function Tables() {
                 mx={2}
                 mt={-3}
                 py={3}
-                px={2}
+                px={7}
                 variant="gradient"
                 bgColor="info"
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
+              <Tilt className="Tilt" options={{ max : 25, scale: 1,  perspective:  1000,     reverse:        false,    }} >
+
+                <MDTypography variant="h4" color="white">
                   Global Leaderboard
                 </MDTypography>
+                </Tilt>
               </MDBox>
               <MDBox pt={3}>
                 <DataTable
