@@ -16,7 +16,7 @@ import MDTypography from "components/MDTypography";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import data from "layouts/dashboard/components/Projects/data";
+import data from "layouts/events/components/Projects/data";
 
 function Projects() {
   const { columns, rows } = data();
