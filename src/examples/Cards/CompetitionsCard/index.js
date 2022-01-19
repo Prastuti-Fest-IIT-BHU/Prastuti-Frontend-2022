@@ -19,7 +19,7 @@ function CompetitionCard({ image, label, title, description, action}) {
   else
   {
     displayType="row"
-    imgw="55%"
+    imgw="45%"
   }
   return (
     < div style={{ display:'flex', justifyContent:'left' }}>
@@ -52,7 +52,7 @@ function CompetitionCard({ image, label, title, description, action}) {
             <MDTypography
               component={Link}
               to={action.route}
-              variant="h4"
+              variant="h3"
               textTransform="capitalize"
             >
               {title}
