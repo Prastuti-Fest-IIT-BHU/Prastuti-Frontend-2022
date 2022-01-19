@@ -1,23 +1,32 @@
 
+
+/* eslint-disable react/prop-types */
 import './fluidcard.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
-function DeveloperCard() {
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+
+function DeveloperCard({ title, description, image }) {
 
   return(
     <div>
-      <div className="background" />
-      <div id="curve" className="card">
+      < DashboardNavbar />
+
+      <div className="background"   />
+
+      <div id="curve" className="card"  style={{backgroundImage: `url(${image})`}}>
         <div className="footer">
           <div className="connections">
             <div className="connection facebook">
-             < FacebookIcon className="icon"/>
+             < FacebookIcon  />
             </div>
             <div className="connection twitter">
-              <div className="icon" />
+              <LinkedInIcon />
             </div>
             <div className="connection behance">
-              <div className="icon" />
+              <InstagramIcon />
             </div>
           </div>
           <svg id="curve">
@@ -95,8 +104,8 @@ function DeveloperCard() {
             />
           </svg>
           <div className="info">
-            <div className="name">Vaibhav Singh</div>
-            <div className="job">Dead inside</div>
+            <div className="name">{title}</div>
+            <div className="job">{description}</div>
           </div>
         </div>
         <div className="card-blur" />
@@ -105,5 +114,7 @@ function DeveloperCard() {
 </div>
 )  ;
 }
+
+
 
 export default DeveloperCard;

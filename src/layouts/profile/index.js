@@ -13,7 +13,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 import ProfilesList from "examples/Lists/ProfilesList";
 
-import Tilt from 'react-tilt';
+/* import Tilt from 'react-tilt'; */
 
 // Overview page components
 import Header from "layouts/profile/components/Header";
@@ -31,7 +31,7 @@ function Overview() {
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox mb={2} />
-            <Tilt className="Tilt" options={{ max : 4,   scale:1.02, }} >
+
       <Header>
 
         <MDBox mt={5} mb={3}>
@@ -43,7 +43,7 @@ function Overview() {
 
 
             <Grid item xs={12} xl={4}>
-              <ProfilesList title="Requests" profiles={profilesListData} shadow={false} />
+              <ProfilesList title="Requests"  profiles={profilesListData} shadow={false} />
             </Grid>
           </Grid>
 
@@ -60,7 +60,7 @@ function Overview() {
 
       </Header>
 
-        </Tilt>
+
 
     </DashboardLayout>
   );

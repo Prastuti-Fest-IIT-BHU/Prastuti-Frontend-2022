@@ -134,7 +134,7 @@ function Tables() {
                 py={3}
                 px={2}
                 variant="gradient"
-                bgColor="success"
+                bgColor="dark"
                 borderRadius="lg"
                 coloredShadow="info"
                 className={eventClassname}

@@ -12,9 +12,7 @@
 }
 
 
-.background {
-      background-image: url("back.jpg");
-    }
+
 
 .card {
     position: absolute;
@@ -153,8 +151,3 @@ svg#curve {
     background-position: center;
     background-size: cover;
 }
-
-
-.card {
-    background-image: url("me.jpg");
-  }
