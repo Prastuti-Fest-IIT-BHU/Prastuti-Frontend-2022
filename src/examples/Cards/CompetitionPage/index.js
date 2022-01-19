@@ -22,14 +22,18 @@ function DefaultProjectCard({ image, title, description, action }) {
   const { width } = useWindowDimensions();
   let PaddingLeft
   let MarginPhone
+  let Pageimg
   if(width<1196 )
   {
     PaddingLeft="5%"
     MarginPhone="1"
+    Pageimg="5"
+
   }
   else
   {
     PaddingLeft="21%"
+    Pageimg="20%"
   }
 
   return (
@@ -56,8 +60,8 @@ function DefaultProjectCard({ image, title, description, action }) {
           sx={{
             maxWidth: "95%",
             margin: 5,
-            marginLeft: 20,
-            marginRight:20,
+            marginLeft:  `${Pageimg}`,
+            marginRight:  `${Pageimg}`,
             boxShadow: ({ boxShadows: { md } }) => md,
             justifyContent: "center",
             display:"flex",
@@ -109,7 +113,7 @@ function DefaultProjectCard({ image, title, description, action }) {
 
 <div style={{ display:'flex', justifyContent:'center' }}>
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
-          gap:2, 
+          gap:2,
         }}>
             <MDButton
               component={Link}
