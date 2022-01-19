@@ -14,7 +14,7 @@ const routes = [
     name: "Events",
     key: "events",
     icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/events",
+    route: "/dashboard",
     component: <Dashboard />,
   },
   {
@@ -22,7 +22,7 @@ const routes = [
     name: "Leaderboards",
     key: "leaderboards",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/leaderboards",
+    route: "/tables",
     component: <Tables />,
   },
   {
