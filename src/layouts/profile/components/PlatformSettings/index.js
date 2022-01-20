@@ -1,5 +1,5 @@
 
-
+import "./platformset.css";
 
 
 // @mui material components
@@ -18,12 +18,16 @@ function PlatformSettings() {
     <Card sx={{ boxShadow: "none" }}>
       <MDBox p={2}>
         <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize"  color ="text" textGradient>
+        <div className="registered_in">
           Registered in:
+          </div>
         </MDTypography>
       </MDBox>
       <MDBox py={1} px={5} lineHeight={0.2}>
         <MDTypography variant="caption" fontWeight="600" color="text" textTransform="uppercase">
-          Event Name
+        <div className="event_name">
+            Event Name
+          </div>
         </MDTypography>
 
       </MDBox>
@@ -48,15 +52,21 @@ function PlatformSettings() {
 
         <MDBox p={2}>
           <MDTypography variant="h5" fontWeight="bold" textTransform="capitalize"  color="text" textGradient>
+          <div className="team">
             Teams:
+            </div>
           </MDTypography>
         </MDBox>
     <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={2} r={3} >
           <MDTypography variant="button" fontWeight="medium" color="text" textTransform="uppercase">
+          <div className="team_name">
             Team 1
+            </div>
           </MDTypography>
           <MDTypography variant="caption" fontWeight="regular" color="text" px={3} py={0.5}>
+          <div className="team_member">
             Utkarsh Pandey
+            </div>
           </MDTypography>
           <MDTypography variant="caption" fontWeight="regular" color="text" px={3} py={0.5}>
             Blue waterbottle
