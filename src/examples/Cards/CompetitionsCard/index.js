@@ -16,20 +16,24 @@ function CompetitionCard({ image, label, title, description, action}) {
   const { width } = useWindowDimensions();
   let displayType
   let imgw
+  let btns
+
   if(width<1096 )
   {
     displayType="column"
     imgw="100%"
+    btns="35%"
   }
   else
   {
     displayType="row"
-    imgw="45%"
+    imgw="37%"
+    btns="85%"
   }
   return (
     < div style={{ display:'flex', justifyContent:'left' }}>
     <Tilt className="Tilt" options={{ max : 3,  scale: 1.01,  }} >
-
+<div className="card_">
     <Card
       sx={{
         display: "flex",
@@ -92,16 +96,19 @@ function CompetitionCard({ image, label, title, description, action}) {
         <MDBox>
         <hr />
         </MDBox >
-          <MDBox mb={3} lineHeight={0} py={2}>
+          <MDBox mb={2} lineHeight={0} py={2}>
           <MDTypography variant="h6" fontWeight="bold" color="text" >
-           0 partcipants registered till now </MDTypography>
+
+           0 partcipants registered till now
+           </MDTypography>
 
           </MDBox>
-          <MDBox ml={48}>
-            <Button variant="outline-danger" className="float-right" href="/codigo">Explore</Button>
+          <MDBox   sx={{ marginLeft:`${btns}`}}>
+            <Button variant="outline-info" className="float-right" href="/codigo">Explore</Button>
             </MDBox >
       </MDBox>
     </Card>
+    </div>
     </Tilt>
     </div>
   );

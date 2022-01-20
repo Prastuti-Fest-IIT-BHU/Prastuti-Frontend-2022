@@ -3,12 +3,26 @@
 
 .cardname{
   font-family: 'Orelega One';
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .content_car{
 
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1rem;
+}
+
+.card_{
+
+width: 115%;
+
+}
+
+
+@media only screen and (max-width: 1096px) {
+  .card_{
+
+  width: 100%;
+  }
 }
