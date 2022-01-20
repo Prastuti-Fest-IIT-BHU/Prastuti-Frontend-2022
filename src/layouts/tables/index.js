@@ -95,7 +95,7 @@ function Tables() {
       </MDBox>
 
 
-      <MDBox pt={6} pb={3}>
+      <MDBox pt={6} pb={3} className={eventClassname}>
         <Grid container spacing={6}>
           <Grid item xs={12}>
             <Card>
