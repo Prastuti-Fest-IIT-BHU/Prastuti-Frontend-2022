@@ -1,11 +1,11 @@
  // prettier-ignore
 // react-router-dom components
-import { Link } from "react-router-dom";
 import Box from '@material-ui/core/Box';
 import Tilt from 'react-tilt';
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
+import Button from 'react-bootstrap/Button';
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -14,7 +14,6 @@ import useWindowDimensions from "hooks/useWindowDimensions";
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
 // import { Grid } from "@mui/material";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
@@ -148,19 +147,8 @@ function DefaultProjectCard({ title, description, action }) {
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
           gap:2, mb:3,
         }}>
-            <MDButton
-              component={Link}
-              to={action.route}
-              variant="outlined"
-              size="small"
-              color="black"
-              sx={{
-                gap: 3,
+        <Button variant="outline-info" className="float-right">Register</Button>
 
-              }}
-            >
-              Register
-            </MDButton>
         </MDBox>
         </Tilt>
 </div>
