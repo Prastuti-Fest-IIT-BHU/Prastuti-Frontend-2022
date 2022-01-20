@@ -93,8 +93,6 @@ const routes = [
     route: "/create-team",
     component: <CreateTeam />,
   },
-
-
 ];
 
 export default routes;

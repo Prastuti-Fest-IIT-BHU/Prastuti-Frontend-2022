@@ -12,9 +12,11 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import EventInfoList from "examples/Lists/EventInfoList";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
+
 import Card from "@mui/material/Card";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
+
 
 // Data
 import profilesListData from "layouts/profile/data/profilesListData";
@@ -44,7 +46,7 @@ function TeamsInfo() {
     <DashboardLayout>
       <DashboardNavbar />
       <Card >
-      <MDBox mb={3} mt={3} sx={{ marginLeft:`${mid}`}} >
+      <MDBox mb={3} mt={3} sx={{ marginLeft:`${mid}`}}>
 
       <MDTypography color="black" >Invite members to your team!</MDTypography>
     </MDBox>
@@ -53,6 +55,8 @@ function TeamsInfo() {
           <Grid container spacing={1}>
             <Grid item xs={12} xl={12}>
 
+
+              
               <EventInfoList title="Requests Sent To"  profiles={profilesListData} shadow={false} />
             </Grid>
             <Grid item xs={12} xl={8}>

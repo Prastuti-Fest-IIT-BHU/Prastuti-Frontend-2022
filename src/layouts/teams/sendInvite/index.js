@@ -17,12 +17,14 @@ import MDInput from "components/MDInput";
 function SendInvite() {
   // const [title, setTitle] = useState('')
 
+
   return (
     <div  flex-basis="50%">
 
     <Card width="10%" display= "inline-block ">
       <MDBox pt={1} px={2} display="flex" justifyContent="space-between" alignItems="center">
         <MDTypography variant="h6" fontWeight="medium"  color="black">
+
           Add Member to the Team
         </MDTypography>
         {/* <MDButton variant="gradient" color="dark">
@@ -39,13 +41,15 @@ function SendInvite() {
               justifyContent="space-between"
               alignItems="center"
 
-              p={2}
+              p={3}
+
               sx={{
                 border: ({ borders: { borderWidth, borderColor } }) =>
                   `${borderWidth[1]} solid ${borderColor}`,
               }}
             >
               <form >
+
               <MDBox pl={2} pr={2} >
               <Tooltip title="Enter the email" placement="top">
               <MDInput />
@@ -53,6 +57,7 @@ function SendInvite() {
             </MDBox>
               <MDButton variant="outlined" color="black" outlined="true" sx={{
                 marginTop : 1.5, marginLeft:6,
+
               }}
                 >Send Invite</MDButton>
               </form>
