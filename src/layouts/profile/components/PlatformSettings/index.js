@@ -57,7 +57,7 @@ function PlatformSettings() {
             </div>
           </MDTypography>
         </MDBox>
-    <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={2} r={3} >
+    <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={5} r={3} >
           <MDTypography variant="button" fontWeight="medium" color="text" textTransform="uppercase">
           <div className="team_name">
             Team 1
@@ -76,7 +76,7 @@ function PlatformSettings() {
           </MDTypography>
 
         </MDBox>
-        <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={2} r={3} py={1} >
+        <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={5} r={3} py={2} >
               <MDTypography variant="button" fontWeight="medium" color="text" textTransform="uppercase">
                 Team 1
               </MDTypography>

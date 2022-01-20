@@ -36,13 +36,13 @@ function Overview() {
 
         <MDBox mt={5} mb={3}>
           <Grid container spacing={1}>
-            <Grid item xs={12} md={6} xl={6}>
+            <Grid item xs={12} md={5} xl={5}>
               <PlatformSettings />
             </Grid>
 
 
 
-            <Grid item xs={12} xl={4}>
+            <Grid item xs={12} xl={6}>
               <ProfilesList title="Requests"  profiles={profilesListData} shadow={false} />
             </Grid>
           </Grid>

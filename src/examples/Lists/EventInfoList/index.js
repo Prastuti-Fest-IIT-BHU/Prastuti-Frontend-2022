@@ -38,20 +38,20 @@ function EventInfoList({ title, profiles, shadow }) {
 
 
   </MDBox>
-  
+
    </div>
 
   ));
 
   return (
     <Grid container spacing={1}>
-            <Grid item xs={12} xl={14}>
+            <Grid item xs={12} xl={6}>
     <Card sx={{ height: "100%", boxShadow: !shadow && "none" }} className="darkMode">
       <MDTypography align="center">Team Name</MDTypography>
 <div display="flex" flexDirection="row">
 <div className="requestsInfo">
       <MDBox pt={2} px={2}>
-        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
           {title}
         </MDTypography>
       </MDBox>
@@ -64,9 +64,9 @@ function EventInfoList({ title, profiles, shadow }) {
 </div>
 <div className="requestsInfo">
       <MDBox pt={2} px={2}>
-        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
           Requests Accepted by
-        </MDTypography> 
+        </MDTypography>
       </MDBox>
       <MDBox p={2}>
         <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>

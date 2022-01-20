@@ -45,6 +45,14 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "Teams",
+    key: "teams",
+    icon: <Icon fontSize="small">people</Icon>,
+    route: "/teams",
+    component: <TeamsInfo />,
+  },
+  {
+    type: "collapse",
     name: "Sign Out",
     key: "sign-up",
     icon: <Icon fontSize="small">meeting_room</Icon>,
@@ -86,14 +94,7 @@ const routes = [
     component: <CreateTeam />,
   },
 
-  {
-    type: "collapse",
-    name: "Teams",
-    key: "teams",
-    icon: <Icon fontSize="small">people</Icon>,
-    route: "/teams",
-    component: <TeamsInfo />,
-  },
+
 ];
 
 export default routes;
