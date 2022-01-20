@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import Tilt from 'react-tilt';
-
+/*  <MDTypography variant="button" fontWeight="bold" color="text" ><Link to= "/codigo">Learn More </Link></MDTypography> */
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 
@@ -67,7 +67,7 @@ function CompetitionCard({ image, label, title, description, action}) {
               href={action.route}
               target="_blank"
               rel="noreferrer"
-              variant="h5"
+              variant="h4"
               textTransform="capitalize"
             >
               {title}
@@ -77,15 +77,17 @@ function CompetitionCard({ image, label, title, description, action}) {
         <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
           {label}
         </MDTypography>
-        <MDBox mb={3} lineHeight={0} py={2}>
+        <MDBox  lineHeight={0} py={2}>
           <MDTypography variant="button" fontWeight="normal" color="text" >
-            {description}...   </MDTypography>
-            <MDTypography variant="button" fontWeight="bold" color="text" ><Link to= "/codigo">Learn More </Link> </MDTypography>
+            {description} </MDTypography>
 
         </MDBox>
+        <MDBox>
+        <hr />
+        </MDBox >
           <MDBox mb={3} lineHeight={0} py={2}>
-          <MDTypography variant="h5" fontWeight="bold" color="text" >
-            Participants: 420 </MDTypography>
+          <MDTypography variant="h6" fontWeight="bold" color="text" >
+          0 partcipants registered till now </MDTypography>
           </MDBox>
       </MDBox>
     </Card>
