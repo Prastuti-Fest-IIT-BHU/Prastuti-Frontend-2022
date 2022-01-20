@@ -17,6 +17,8 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 // import { Grid } from "@mui/material";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import backgroundImage from "assets/images/bg-profile.jpeg";
+
 
 function DefaultProjectCard({ image, title, description, action }) {
 
@@ -44,14 +46,35 @@ function DefaultProjectCard({ image, title, description, action }) {
 <Box  sx={{
   ml: `${PaddingLeft}`,  mr: `${MarginPhone}`, mb:3,
 }} ><DashboardNavbar/>
+<MDBox
+  display="flex"
+  alignItems="center"
+  position="relative"
+  minHeight="18.75rem"
+  borderRadius="xl"
+  sx={{
+    backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+      `${linearGradient(
+        rgba(gradients.info.main, 0.6),
+        rgba(gradients.info.state, 0.6)
+      )}, url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "50%",
+    overflow: "hidden",
+  }}
+/>
     <Card
       sx={{
+        position: "relative",
+        mt: -8,
+        mx: 3,
+        py: 2,
+        px: 2,
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#e6f7ff",
+        backgroundColor: "#ffff",
         boxShadow: "none",
         overflow: "visible",
-        maxWidth: "98%",
       }}
     >
 
