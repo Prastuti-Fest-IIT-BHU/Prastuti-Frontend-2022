@@ -2,28 +2,23 @@
 // react-routers components
 
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 
 // prop-types is library for typechecking of props
 import PropTypes from "prop-types";
+
 // @mui material components
 import Card from "@mui/material/Card";
 
 
 
 // Prastuti  2 React components
-
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
+import SendInvite from 'layouts/teams/sendInvite';
+import { Grid } from '@mui/material';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Button from 'react-bootstrap/Button'
-import Tilt from 'react-tilt';
-
-
-
-function ProfilesList({ title, profiles, shadow }) {
+function EventInfoList({ title, profiles, shadow }) {
   const renderProfiles = profiles.map(({ image, name, description }) => (
     <div>
     <MDBox key={name} component="li" display="flex" alignItems="center" py={2} mb={1} >
@@ -43,27 +38,20 @@ function ProfilesList({ title, profiles, shadow }) {
 
 
   </MDBox>
-  <Stack spacing={2} direction="row" py={0} >
-  <Tilt className="Tilt" options={{ max : 6,  scale: 1.2,  }} >
-
-  <Button variant="outline-success">Accept</Button>
-
-  </Tilt>
-  <Tilt className="Tilt" options={{ max : 6,  scale: 1.2,  }}>
-
-  <Button variant="outline-danger">Decline</Button>
-
-  </Tilt>
-
- </Stack>
+  
    </div>
 
   ));
 
   return (
-    <Card sx={{ height: "100%", boxShadow: !shadow && "none" }}>
+    <Grid container spacing={1}>
+            <Grid item xs={12} xl={14}>
+    <Card sx={{ height: "100%", boxShadow: !shadow && "none" }} className="darkMode">
+      <MDTypography align="center">Team Name</MDTypography>
+<div display="flex" flexDirection="row">
+<div className="requestsInfo">
       <MDBox pt={2} px={2}>
-        <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize" color="black" textGradient>
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
           {title}
         </MDTypography>
       </MDBox>
@@ -71,21 +59,41 @@ function ProfilesList({ title, profiles, shadow }) {
         <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           {renderProfiles}
         </MDBox>
+
       </MDBox>
+</div>
+<div className="requestsInfo">
+      <MDBox pt={2} px={2}>
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
+          Requests Accepted by
+        </MDTypography> 
+      </MDBox>
+      <MDBox p={2}>
+        <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+          {renderProfiles}
+        </MDBox>
+
+      </MDBox>
+</div>
+</div>
+        <SendInvite/>
+
     </Card>
+    </Grid>
+    </Grid>
   );
 }
 
-// Setting default props for the ProfilesList
-ProfilesList.defaultProps = {
+// Setting default props for the EventInfoList
+EventInfoList.defaultProps = {
   shadow: true,
 };
 
-// Typechecking props for the ProfilesList
-ProfilesList.propTypes = {
+// Typechecking props for the EventInfoList
+EventInfoList.propTypes = {
   title: PropTypes.string.isRequired,
   profiles: PropTypes.arrayOf(PropTypes.object).isRequired,
   shadow: PropTypes.bool,
 };
 
-export default ProfilesList;
+export default EventInfoList;

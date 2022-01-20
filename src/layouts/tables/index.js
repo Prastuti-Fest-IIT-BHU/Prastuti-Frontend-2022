@@ -1,6 +1,4 @@
 
-
-// @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import * as React from 'react';
@@ -17,11 +15,11 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
+// import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
 
 function Tables() {
-  const { columns, rows } = authorsTableData();
+  // const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [eventClassname, setEventClassname] = React.useState("Event 1");
@@ -83,7 +81,10 @@ function Tables() {
             handleClose();
             handleClass("Event 2");
           }}>Event 2</MenuItem>
-          <MenuItem onClick={handleClose}>Event 3</MenuItem>
+          <MenuItem onClick={()=>{
+            handleClose();
+            handleClass("Global ");
+          }}>Global</MenuItem>
           <MenuItem onClick={handleClose}>Event 1</MenuItem>
           <MenuItem onClick={handleClose}>Event 2</MenuItem>
           <MenuItem onClick={handleClose}>Event 3</MenuItem>
@@ -95,9 +96,9 @@ function Tables() {
       </MDBox>
 
 
-      <MDBox pt={6} pb={3}>
+      <MDBox pt={6} pb={3} className={eventClassname}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <Card>
               <MDBox
                 mx={2}
@@ -123,7 +124,7 @@ function Tables() {
                 />
               </MDBox>
             </Card>
-          </Grid>
+          </Grid> */}
 
           {
 
