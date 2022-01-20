@@ -52,7 +52,7 @@ function CompetitionCard({ image, label, title, description, action}) {
         />
       <MDBox mt={1} mx={0.5} p={2}>
 
-        <MDBox mb={1}>
+        <MDBox mb={0.1}>
           {action.type === "internal" ? (
             <MDTypography
               component={Link}

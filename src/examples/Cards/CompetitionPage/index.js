@@ -19,8 +19,11 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import "./competitionpage.css";
 
-function DefaultProjectCard({ title, description, action }) {
+
+
+function DefaultProjectCard({ title, description }) {
 
   const { width } = useWindowDimensions();
   let PaddingLeft
@@ -94,17 +97,10 @@ function DefaultProjectCard({ title, description, action }) {
 <div style={{ display:'flex', justifyContent:'center' }}>
 
 
-        <MDBox mb={3} >
-            <MDTypography
-              component="a"
-              href={action.route}
-              target="_blank"
-              rel="noreferrer"
-              variant="h3"
-              textTransform="capitalize"
-            >
+        <MDBox mb={3}  >
+            <div className="heading_competition_page">
               {title}
-            </MDTypography>
+          </div>
 
         </MDBox>
 
