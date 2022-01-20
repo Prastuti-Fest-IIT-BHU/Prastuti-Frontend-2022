@@ -15,6 +15,8 @@ import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
+import SendInvite from 'layouts/teams/sendInvite';
+import { Grid } from '@mui/material';
 
 function EventInfoList({ title, profiles, shadow }) {
   const renderProfiles = profiles.map(({ image, name, description }) => (
@@ -42,9 +44,14 @@ function EventInfoList({ title, profiles, shadow }) {
   ));
 
   return (
+    <Grid container spacing={1}>
+            <Grid item xs={12} xl={14}>
     <Card sx={{ height: "100%", boxShadow: !shadow && "none" }} className="darkMode">
+      <MDTypography align="center">Team Name</MDTypography>
+<div display="flex" flexDirection="row">
+<div className="requestsInfo">
       <MDBox pt={2} px={2}>
-        <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize" color="white" >
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
           {title}
         </MDTypography>
       </MDBox>
@@ -52,8 +59,28 @@ function EventInfoList({ title, profiles, shadow }) {
         <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           {renderProfiles}
         </MDBox>
+
       </MDBox>
+</div>
+<div className="requestsInfo">
+      <MDBox pt={2} px={2}>
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
+          Requests Accepted by
+        </MDTypography>
+      </MDBox>
+      <MDBox p={2}>
+        <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+          {renderProfiles}
+        </MDBox>
+
+      </MDBox>
+</div>
+</div>
+        <SendInvite/>
+
     </Card>
+    </Grid>
+    </Grid>
   );
 }
 

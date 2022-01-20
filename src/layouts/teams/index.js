@@ -18,7 +18,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 // Data
 import profilesListData from "layouts/profile/data/profilesListData";
 // import AddTask from "./rendertest";
-import SendInvite from "./sendInvite";
+// import SendInvite from "./sendInvite";
 
 
 
@@ -35,10 +35,11 @@ function TeamsInfo() {
         <MDBox mt={5} mb={3}>
           <Grid container spacing={1}>
             <Grid item xs={12} xl={4}>
+              
               <EventInfoList title="Requests Sent To"  profiles={profilesListData} shadow={false} />
             </Grid>
             <Grid item xs={12} xl={8}>
-              <SendInvite/>
+              {/* <SendInvite/> */}
             </Grid>
           </Grid>
 

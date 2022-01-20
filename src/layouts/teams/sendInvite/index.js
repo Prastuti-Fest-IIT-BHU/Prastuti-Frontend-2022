@@ -31,8 +31,8 @@ function SendInvite() {
         </MDButton> */}
       </MDBox>
       <MDBox p={2}>
-        <Grid container spacing={3} display="flex" flexDirection="row" alignItems="center">
-          <Grid item xs={12} md={8} >
+        <Grid container spacing={3} display="flex" flexDirection="column" alignItems="center">
+          <Grid item xs={12} md={12} >
             <MDBox
               borderRadius="lg"
               display="flex"
@@ -48,7 +48,9 @@ function SendInvite() {
               <Tooltip title="Enter the email" placement="top">
               <MDInput />
               </Tooltip>
-              <MDButton variant="outlined" color="white" outlined="true"
+              <MDButton variant="outlined" color="white" outlined="true" sx={{
+                marginTop : 2
+              }}
                 >Send Invite</MDButton>
               </form>
             </MDBox>
