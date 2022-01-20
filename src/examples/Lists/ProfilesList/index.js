@@ -3,22 +3,23 @@
 
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import DoneIcon from '@mui/icons-material/Done';
 
 // prop-types is library for typechecking of props
 import PropTypes from "prop-types";
-
 // @mui material components
 import Card from "@mui/material/Card";
 
 
 
 // Prastuti  2 React components
+
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Tilt from 'react-tilt';
+
 
 
 function ProfilesList({ title, profiles, shadow }) {
@@ -41,12 +42,18 @@ function ProfilesList({ title, profiles, shadow }) {
 
 
   </MDBox>
-  <Stack spacing={1} direction="row" >
-  <Button variant="contained" color="success" size="small"   sx={{
-      border: "2px green solid"
-    }} startIcon={<DoneIcon />}>Accept</Button>
+  <Stack spacing={2} direction="row" py={0} >
+  <Tilt className="Tilt" options={{ max : 6,  scale: 1.2,  }} >
 
-  <Button variant="contained" color="success" size="small"  sx={{ border: "2px red solid" }} startIcon={<DeleteIcon />}>Decline</Button>
+  <Button variant="outline-success">Accept</Button>
+
+  </Tilt>
+  <Tilt className="Tilt" options={{ max : 6,  scale: 1.2,  }}>
+
+  <Button variant="outline-danger">Decline</Button>
+
+  </Tilt>
+
  </Stack>
    </div>
 
@@ -55,7 +62,7 @@ function ProfilesList({ title, profiles, shadow }) {
   return (
     <Card sx={{ height: "100%", boxShadow: !shadow && "none" }}>
       <MDBox pt={2} px={2}>
-        <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize" color="info" textGradient>
+        <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize" color="black" textGradient>
           {title}
         </MDTypography>
       </MDBox>
