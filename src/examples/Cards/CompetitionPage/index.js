@@ -29,7 +29,7 @@ import "./competitionpage.css";
 
 
 
-function DefaultProjectCard({ title, description }) {
+function DefaultProjectCard({ title, description , action}) {
 
   const { width } = useWindowDimensions();
   let PaddingLeft

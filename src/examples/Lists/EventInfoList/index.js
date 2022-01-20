@@ -56,7 +56,7 @@ function EventInfoList({ title, profiles, shadow }) {
       <MDBox pt={2} px={2}>
 
         
-        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
+        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
 
           {title}
         </MDTypography>
