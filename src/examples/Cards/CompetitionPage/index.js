@@ -124,7 +124,7 @@ function DefaultProjectCard({ title, description }) {
             Coordinators:
           </MDTypography>
         </MDBox>
-        <MDBox   mb={0.5} lineHeight={0} justifyContent="center" sx={{
+        <MDBox   mb={2} lineHeight={0} justifyContent="center" sx={{
           marginLeft: 5,
           marginRight:3,
         }}>
