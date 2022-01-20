@@ -96,13 +96,15 @@ function CompetitionCard({ image, label, title, description, action}) {
         <MDBox>
         <hr />
         </MDBox >
-        <div className="row"><div className="col-8">  <MDBox mb={1} lineHeight={0} py={2}>
+        <div className="row">
+        <div className="col-7">
+         <MDBox mb={1} lineHeight={0} py={2}>
           <MDTypography variant="h6" fontWeight="bold" color="text" >
 
            0 partcipants registered till now
            </MDTypography>
 
-          </MDBox></div><div className="col-4">  <MDBox  py={2}  sx={{ marginLeft:`${btns}`}}>
+          </MDBox></div><div className="col-5">  <MDBox  py={2}  sx={{ marginLeft:`${btns}`}}>
               <Button variant="outline-info" className="float-right" href="/codigo">Explore</Button>
               </MDBox ></div></div>
 
