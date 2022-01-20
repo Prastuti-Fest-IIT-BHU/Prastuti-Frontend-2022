@@ -66,7 +66,7 @@ function EventInfoList({ title, profiles, shadow }) {
       <MDBox pt={2} px={2}>
         <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="white" >
           Requests Accepted by
-        </MDTypography>
+        </MDTypography> 
       </MDBox>
       <MDBox p={2}>
         <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
