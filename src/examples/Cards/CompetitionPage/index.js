@@ -25,8 +25,11 @@ import backgroundImage from "assets/images/bg-profile.jpeg";
 
 
 
+import "./competitionpage.css";
 
-function DefaultProjectCard({ title, description, action }) {
+
+
+function DefaultProjectCard({ title, description }) {
 
   const { width } = useWindowDimensions();
   let PaddingLeft
@@ -100,17 +103,10 @@ function DefaultProjectCard({ title, description, action }) {
 <div style={{ display:'flex', justifyContent:'center' }}>
 
 
-        <MDBox mb={3} >
-            <MDTypography
-              component="a"
-              href={action.route}
-              target="_blank"
-              rel="noreferrer"
-              variant="h3"
-              textTransform="capitalize"
-            >
+        <MDBox mb={3}  >
+            <div className="heading_competition_page">
               {title}
-            </MDTypography>
+          </div>
 
         </MDBox>
 
@@ -120,17 +116,11 @@ function DefaultProjectCard({ title, description, action }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+          <div className="content">
             {description}
+            </div>
           </MDTypography>
-          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            {description}
-          </MDTypography>
-          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            {description}
-          </MDTypography>
-          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            {description}
-          </MDTypography>
+
         </MDBox>
         <MDBox mb={1} lineHeight={0} justifyContent="center" sx={{
           marginLeft: 3,
@@ -140,7 +130,7 @@ function DefaultProjectCard({ title, description, action }) {
             Coordinators:
           </MDTypography>
         </MDBox>
-        <MDBox   mb={0.5} lineHeight={0} justifyContent="center" sx={{
+        <MDBox   mb={2} lineHeight={0} justifyContent="center" sx={{
           marginLeft: 5,
           marginRight:3,
         }}>

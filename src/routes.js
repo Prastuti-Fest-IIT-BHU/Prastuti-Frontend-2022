@@ -45,6 +45,14 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "Teams",
+    key: "teams",
+    icon: <Icon fontSize="small">people</Icon>,
+    route: "/teams",
+    component: <TeamsInfo />,
+  },
+  {
+    type: "collapse",
     name: "Sign Out",
     key: "sign-up",
     icon: <Icon fontSize="small">meeting_room</Icon>,
@@ -84,15 +92,6 @@ const routes = [
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/create-team",
     component: <CreateTeam />,
-  },
-
-  {
-    type: "collapse",
-    name: "Teams",
-    key: "teams",
-    icon: <Icon fontSize="small">people</Icon>,
-    route: "/teams",
-    component: <TeamsInfo />,
   },
 ];
 
