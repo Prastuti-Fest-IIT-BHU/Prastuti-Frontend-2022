@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
 
 .cardname{
-  font-family: 'Orelega One';
-  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.3rem;
+}
+
+.sub_head{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .content_car{
 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-    font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1rem;
+    color: black;
 }
 
 .card_{

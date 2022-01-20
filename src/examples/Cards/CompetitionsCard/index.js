@@ -28,7 +28,7 @@ function CompetitionCard({ image, label, title, description, action}) {
   {
     displayType="row"
     imgw="37%"
-    btns="85%"
+    btns="55%"
   }
   return (
     < div style={{ display:'flex', justifyContent:'left' }}>
@@ -82,10 +82,10 @@ function CompetitionCard({ image, label, title, description, action}) {
             </MDTypography>
           )}
         </MDBox>
-        <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
-          {label}
+        <MDTypography variant="button" fontWeight="regular" color="black" textTransform="capitalize">
+          <div className="sub_head">{label}</div>
         </MDTypography>
-        <MDBox  lineHeight={0} py={2}>
+        <MDBox  lineHeight={0} py={3}>
           <MDTypography variant="button" fontWeight="normal" color="text" >
           <div className="content_car">
           {description}</div> </MDTypography>
@@ -96,16 +96,17 @@ function CompetitionCard({ image, label, title, description, action}) {
         <MDBox>
         <hr />
         </MDBox >
-          <MDBox mb={2} lineHeight={0} py={2}>
+        <div className="row"><div className="col-8">  <MDBox mb={1} lineHeight={0} py={2}>
           <MDTypography variant="h6" fontWeight="bold" color="text" >
 
            0 partcipants registered till now
            </MDTypography>
 
-          </MDBox>
-          <MDBox   sx={{ marginLeft:`${btns}`}}>
-            <Button variant="outline-info" className="float-right" href="/codigo">Explore</Button>
-            </MDBox >
+          </MDBox></div><div className="col-4">  <MDBox  py={2}  sx={{ marginLeft:`${btns}`}}>
+              <Button variant="outline-info" className="float-right" href="/codigo">Explore</Button>
+              </MDBox ></div></div>
+
+
       </MDBox>
     </Card>
     </div>

@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 
-
+import "./team_name.css";
 
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
@@ -44,12 +44,17 @@ function EventInfoList({ title, profiles}) {
 
   return (
     <div>
-      <MDBox mt={3} mb={2} ml={3}>
+
+
 
 
       <MDBox mb={4} >
-        <MDTypography align="center">Team Name</MDTypography>
+        <MDTypography align="center"><div className="team_name">Team Name</div></MDTypography>
       </MDBox>
+      <MDBox mt={3} >
+            <SendInvite/>
+          </MDBox>
+      <MDBox mt={3} mb={2} ml={3}>
 
     <Grid container spacing={1}>
 
@@ -74,7 +79,7 @@ function EventInfoList({ title, profiles}) {
 
              <MDBox pt={2} px={2}>
                <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
-                    Requests Accepted by
+                    Team Members
                </MDTypography>
              </MDBox>
              <MDBox p={2}>
@@ -88,9 +93,6 @@ function EventInfoList({ title, profiles}) {
   </Grid>
     </MDBox>
 
-  <MDBox mt={3} >
-        <SendInvite/>
-      </MDBox>
 
 
 </div>

@@ -41,7 +41,7 @@ function SendInvite() {
               p={2}
               sx={{
                 border: ({ borders: { borderWidth, borderColor } }) =>
-                  `${borderWidth[1]} solid ${borderColor}`,
+                  `${borderWidth[1]} solid ${borderColor}`, 
               }}
             >
               <form >

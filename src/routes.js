@@ -5,7 +5,6 @@ import SignUp from "layouts/authentication/sign-up";
 import Icon from "@mui/material/Icon";
 import TeamRegister from "layouts/register/teamRegister";
 import CreateTeam from "layouts/register/createTeam";
-import JoinTeam from "layouts/register/joinTeam";
 import Codigo from "layouts/competitions/codigo";
 import CoreTeam from "layouts/core/coreteam";
 import TeamsInfo from "layouts/teams";
@@ -46,12 +45,13 @@ const routes = [
     component: <TeamsInfo />,
   },
   {
-    type: "collapse",
+    type: " ",
     name: "Core Team",
     key: "dev",
     icon: <Icon fontSize="small">badge_icon</Icon>,
     route: "/dev",
     component: <CoreTeam />,
+
   },
   {
     type: "collapse",
@@ -69,14 +69,7 @@ const routes = [
     route: "/team-register",
     component: <TeamRegister />,
   },
-    {
-    type: " ",
-    name: "Join a Team",
-    key: "join-team",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/join-team",
-    component: <JoinTeam />,
-  },
+
 
     {
     type: " ",
