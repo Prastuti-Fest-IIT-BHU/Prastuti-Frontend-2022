@@ -82,7 +82,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           key={key}
           color={textColor}
           display="block"
-          variant="caption"
+          variant="h2"
           fontWeight="bold"
           textTransform="uppercase"
           pl={3}
