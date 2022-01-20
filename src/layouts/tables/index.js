@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable prefer-const */
 /* eslint-disable no-unused-vars */
-
+import "./leader.css";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import * as React from 'react';
@@ -59,7 +59,9 @@ function Tables() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Select
+      <div className="drop_down">
+        Select your event  <i className="fas fa-caret-down" />
+        </div>
       </Button>
       <Menu
         id="demo-positioned-menu"

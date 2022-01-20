@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
@@ -49,21 +48,7 @@ function CreateTeam() {
                 Create the team!
               </MDButton>
             </MDBox>
-            <MDBox mt={3} mb={1} textAlign="center">
-              <MDTypography variant="button" color="text">
-                Already a part of team?
-                <MDTypography
-                  component={Link}
-                  to="/join-team"
-                  variant="button"
-                  color="info"
-                  fontWeight="medium"
-                  textGradient
-                >
-                  Join the team!
-                </MDTypography>
-              </MDTypography>
-            </MDBox>
+
           </MDBox>
         </MDBox>
       </Card>
