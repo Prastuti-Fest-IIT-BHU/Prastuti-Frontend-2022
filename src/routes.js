@@ -8,6 +8,7 @@ import CreateTeam from "layouts/register/createTeam";
 import JoinTeam from "layouts/register/joinTeam";
 import Codigo from "layouts/competitions/codigo";
 import CoreTeam from "layouts/core/coreteam";
+import TeamsInfo from "layouts/teams";
 
 const routes = [
   {
@@ -83,6 +84,15 @@ const routes = [
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/create-team",
     component: <CreateTeam />,
+  },
+
+  {
+    type: "collapse",
+    name: "Teams",
+    key: "teams",
+    icon: <Icon fontSize="small">people</Icon>,
+    route: "/teams",
+    component: <TeamsInfo />,
   },
 ];
 

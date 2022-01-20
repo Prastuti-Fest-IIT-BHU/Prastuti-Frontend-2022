@@ -110,17 +110,11 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+          <div className="content">
             {description}
+            </div>
           </MDTypography>
-          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            {description}
-          </MDTypography>
-          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            {description}
-          </MDTypography>
-          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            {description}
-          </MDTypography>
+
         </MDBox>
         <MDBox mb={1} lineHeight={0} justifyContent="center" sx={{
           marginLeft: 3,

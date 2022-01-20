@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.cardname{
+  font-family: 'Orelega One';
+  font-size: 1.5em;
+}
+
+.content_car{
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+    font-size: 1.1em;
+}

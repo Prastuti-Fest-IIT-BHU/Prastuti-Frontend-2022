@@ -1,6 +1,4 @@
 
-
-// @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import * as React from 'react';
@@ -17,17 +15,17 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
+// import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
 
 function Tables() {
-  const { columns, rows } = authorsTableData();
+  // const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [eventClassname, setEventClassname] = React.useState("Event 1");
 
 
-
+  
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -44,11 +42,63 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <MDBox>
+
+<div>
+      <Button
+        id="demo-positioned-button"
+        aria-controls={open ? 'demo-positioned-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Select
+      </Button>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+      >
+          <MenuItem onClick={()=>{
+            handleClose();
+            handleClass("Event 3");
+          }}>Event 3</MenuItem>
+          <MenuItem onClick={()=>{
+            handleClose();
+            handleClass("Event 1");
+          }}>Event 1</MenuItem>
+          <MenuItem onClick={()=>{
+            handleClose();
+            handleClass("Event 2");
+          }}>Event 2</MenuItem>
+          <MenuItem onClick={()=>{
+            handleClose();
+            handleClass("Global ");
+          }}>Global</MenuItem>
+          <MenuItem onClick={handleClose}>Event 1</MenuItem>
+          <MenuItem onClick={handleClose}>Event 2</MenuItem>
+          <MenuItem onClick={handleClose}>Event 3</MenuItem>
+      </Menu>
+    </div>
 
 
-      <MDBox pt={6} pb={3}>
+
+      </MDBox>
+
+
+      <MDBox pt={6} pb={3} className={eventClassname}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <Card>
               <MDBox
                 mx={2}
@@ -74,57 +124,12 @@ function Tables() {
                 />
               </MDBox>
             </Card>
-          </Grid>
-          <MDBox>
+          </Grid> */}
 
-  <MDBox mt={3} px={5}>
-          <Button
-            id="demo-positioned-button"
-            aria-controls={open ? 'demo-positioned-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-            onClick={handleClick}
-          >
-            Select
-          </Button>
-          <Menu
-            id="demo-positioned-menu"
-            aria-labelledby="demo-positioned-button"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-            }}
-          >
-              <MenuItem onClick={()=>{
-                handleClose();
-                handleClass("Event 3");
-              }}>Event 3</MenuItem>
-              <MenuItem onClick={()=>{
-                handleClose();
-                handleClass("Event 1");
-              }}>Event 1</MenuItem>
-              <MenuItem onClick={()=>{
-                handleClose();
-                handleClass("Event 2");
-              }}>Event 2</MenuItem>
-              <MenuItem onClick={handleClose}>Event 3</MenuItem>
-              <MenuItem onClick={handleClose}>Event 1</MenuItem>
-              <MenuItem onClick={handleClose}>Event 2</MenuItem>
-              <MenuItem onClick={handleClose}>Event 3</MenuItem>
-          </Menu>
-        </MDBox>
+          {
 
 
-
-          </MDBox>
-
+          }
 
           <Grid item xs={12}>
             <Card>

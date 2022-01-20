@@ -6,6 +6,7 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import Tilt from 'react-tilt';
 import Button from 'react-bootstrap/Button';
+import "./competitioncard.css";
 
 /*  <MDTypography variant="button" fontWeight="bold" color="text" ><Link to= "/codigo">Learn More </Link></MDTypography> */
 
@@ -59,8 +60,9 @@ function CompetitionCard({ image, label, title, description, action}) {
               to={action.route}
               variant="h3"
               textTransform="capitalize"
-            >
+            ><div className="cardname">
               {title}
+              </div>
             </MDTypography>
           ) : (
             <MDTypography
@@ -70,8 +72,9 @@ function CompetitionCard({ image, label, title, description, action}) {
               rel="noreferrer"
               variant="h4"
               textTransform="capitalize"
-            >
+            ><div className="cardname">
               {title}
+                </div>
             </MDTypography>
           )}
         </MDBox>
@@ -80,7 +83,8 @@ function CompetitionCard({ image, label, title, description, action}) {
         </MDTypography>
         <MDBox  lineHeight={0} py={2}>
           <MDTypography variant="button" fontWeight="normal" color="text" >
-          {description} </MDTypography>
+          <div className="content_car">
+          {description}</div> </MDTypography>
 
         </MDBox>
 
@@ -94,7 +98,7 @@ function CompetitionCard({ image, label, title, description, action}) {
 
           </MDBox>
           <MDBox ml={48}>
-            <Button variant="outline-danger" className="float-right" href="/codigo">Register</Button>
+            <Button variant="outline-danger" className="float-right" href="/codigo">Explore</Button>
             </MDBox >
       </MDBox>
     </Card>
