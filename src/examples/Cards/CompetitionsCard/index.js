@@ -31,7 +31,6 @@ function CompetitionCard({ image, label, title, description, action}) {
 
     <Card
       sx={{
-
         display: "flex",
         flexDirection: `${displayType}`,
         backgroundColor: "#ffff",

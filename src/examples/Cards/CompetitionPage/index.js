@@ -17,6 +17,7 @@ import MDTypography from "components/MDTypography";
 // import { Grid } from "@mui/material";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function DefaultProjectCard({ title, description, action }) {
