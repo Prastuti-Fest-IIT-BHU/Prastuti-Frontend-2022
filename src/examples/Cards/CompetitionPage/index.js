@@ -2,14 +2,11 @@
 // react-router-dom components
 import Box from '@material-ui/core/Box';
 import Tilt from 'react-tilt';
-// Button
-import Button from 'react-bootstrap/Button'
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
+import Button from 'react-bootstrap/Button';
 
-
-// ButtonGroup
 // @mui material components
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
@@ -20,16 +17,13 @@ import MDTypography from "components/MDTypography";
 // import { Grid } from "@mui/material";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
-
-
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./competitionpage.css";
 
 
 
-function DefaultProjectCard({ title, description , action}) {
+function DefaultProjectCard({ title, description }) {
 
   const { width } = useWindowDimensions();
   let PaddingLeft
@@ -144,7 +138,7 @@ function DefaultProjectCard({ title, description , action}) {
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
           gap:2, mb:3,
         }}>
-        <Button variant="outline-info" className="float-right" href={action.route}>Register</Button>
+        <Button variant="outline-info" className="float-right">Register</Button>
 
         </MDBox>
         </Tilt>

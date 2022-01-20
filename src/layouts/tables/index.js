@@ -30,7 +30,7 @@ function Tables() {
 
 
 
-  
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -43,7 +43,7 @@ function Tables() {
   const handleClass=(className)=>{
     setEventClassname(className);
 
-    
+
   }
 
   return (
@@ -103,7 +103,7 @@ eventClassname==="Event 1"? (
             <Card>
               <MDBox
                 mx={2}
-                mt={-3}
+                mt={1}
                 py={3}
                 px={2}
                 variant="gradient"
@@ -134,7 +134,7 @@ eventClassname==="Event 1"? (
             <Card>
               <MDBox
                 mx={2}
-                mt={-3}
+                mt={1}
                 py={3}
                 px={2}
                 variant="gradient"
@@ -162,7 +162,7 @@ eventClassname==="Event 1"? (
             <Card>
               <MDBox
                 mx={2}
-                mt={-3}
+                mt={1}
                 py={3}
                 px={2}
                 variant="gradient"
@@ -194,7 +194,7 @@ eventClassname==="Event 1"? (
             <Card>
               <MDBox
                 mx={2}
-                mt={-3}
+                mt={1}
                 py={3}
                 px={2}
                 variant="gradient"
@@ -221,7 +221,7 @@ eventClassname==="Event 1"? (
 
           </Grid>
   ): (<h1>None</h1>)
-) 
+)
 ))
 
 }
@@ -229,7 +229,7 @@ eventClassname==="Event 1"? (
       </MDBox>
 
 
-      <MDBox pt={6} pb={3} className="Global Leaderboard" >
+      <MDBox mt={8} pb={3}  className="Global Leaderboard" >
         <Grid container spacing={6}>
           {/* <Grid item xs={12}>
             <Card>
