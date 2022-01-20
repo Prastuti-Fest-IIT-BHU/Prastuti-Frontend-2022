@@ -10,6 +10,7 @@ import Codigo from "layouts/competitions/codigo";
 import CoreTeam from "layouts/core/coreteam";
 import TeamsInfo from "layouts/teams";
 
+
 const routes = [
   {
     type: "collapse",
@@ -35,14 +36,7 @@ const routes = [
     route: "/profile",
     component: <Profile />,
   },
-  {
-    type: "collapse",
-    name: "Core Team",
-    key: "dev",
-    icon: <Icon fontSize="small">group_icon</Icon>,
-    route: "/dev",
-    component: <CoreTeam />,
-  },
+
   {
     type: "collapse",
     name: "Teams",
@@ -50,6 +44,14 @@ const routes = [
     icon: <Icon fontSize="small">people</Icon>,
     route: "/teams",
     component: <TeamsInfo />,
+  },
+  {
+    type: "collapse",
+    name: "Core Team",
+    key: "dev",
+    icon: <Icon fontSize="small">badge_icon</Icon>,
+    route: "/dev",
+    component: <CoreTeam />,
   },
   {
     type: "collapse",

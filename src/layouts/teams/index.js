@@ -49,13 +49,15 @@ function TeamsInfo() {
       <MDTypography color="black" >Invite members to your team!</MDTypography>
     </MDBox>
     </Card>
+    <MDBox mt={3}>
+    <Card >
          <MDBox mt={3} mb={3}>
           <Grid container spacing={1}>
-            <Grid item xs={12} xl={12}>
+            <Grid item xs={12} xl={14}>
 
               <EventInfoList title="Requests Sent To"  profiles={profilesListData} shadow={false} />
             </Grid>
-            <Grid item xs={12} xl={8}>
+            <Grid item xs={12} xl={12}>
               {/* <SendInvite/> */}
             </Grid>
           </Grid>
@@ -63,14 +65,8 @@ function TeamsInfo() {
 {/* <AddTask/> */}
         </MDBox>
 
-
-        <MDBox pt={2} px={2} lineHeight={0.5}>
-          <MDTypography variant="h6" fontWeight='bold' color="light">
-            @PRASTUTI
-          </MDTypography>
-
-        </MDBox>
-
+</Card>
+</MDBox>
 
 
     </DashboardLayout>

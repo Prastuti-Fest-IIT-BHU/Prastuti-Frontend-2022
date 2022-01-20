@@ -7,7 +7,6 @@ import * as React from 'react';
 import PropTypes from "prop-types";
 
 // @mui material components
-import Card from "@mui/material/Card";
 
 
 
@@ -18,7 +17,7 @@ import MDAvatar from "components/MDAvatar";
 import SendInvite from 'layouts/teams/sendInvite';
 import { Grid } from '@mui/material';
 
-function EventInfoList({ title, profiles, shadow }) {
+function EventInfoList({ title, profiles}) {
   const renderProfiles = profiles.map(({ image, name, description }) => (
     <div>
     <MDBox key={name} component="li" display="flex" alignItems="center" py={2} mb={1} >
@@ -44,56 +43,72 @@ function EventInfoList({ title, profiles, shadow }) {
   ));
 
   return (
+    <div>
+      <MDBox mt={3} mb={2} ml={3}>
+
+
+      <MDBox mb={4} >
+        <MDTypography align="center">Team Name</MDTypography>
+      </MDBox>
+
     <Grid container spacing={1}>
-            <Grid item xs={12} xl={6}>
-    <Card sx={{ height: "100%", boxShadow: !shadow && "none" }} className="darkMode">
-      <MDTypography align="center">Team Name</MDTypography>
-<div display="flex" flexDirection="row">
-<div className="requestsInfo">
-      <MDBox pt={2} px={2}>
-        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
-          {title}
-        </MDTypography>
-      </MDBox>
-      <MDBox p={2}>
-        <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-          {renderProfiles}
-        </MDBox>
 
-      </MDBox>
-</div>
-<div className="requestsInfo">
-      <MDBox pt={2} px={2}>
-        <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
-          Requests Accepted by
-        </MDTypography>
-      </MDBox>
-      <MDBox p={2}>
-        <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-          {renderProfiles}
-        </MDBox>
 
-      </MDBox>
-</div>
-</div>
+
+              <Grid item xs={12} xl={7}>
+
+                <MDBox pt={2} px={2}>
+                  <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
+                    {title}
+                  </MDTypography>
+               </MDBox>
+               <MDBox p={2}>
+                 <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+                    {renderProfiles}
+                 </MDBox>
+
+               </ MDBox>
+
+             </Grid>
+            <Grid item xs={12} xl={5}>
+
+             <MDBox pt={2} px={2}>
+               <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
+                    Requests Accepted by
+               </MDTypography>
+             </MDBox>
+             <MDBox p={2}>
+               <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+                    {renderProfiles}
+               </MDBox>
+
+               </MDBox>
+              </Grid>
+
+  </Grid>
+    </MDBox>
+
+  <MDBox mt={3} >
         <SendInvite/>
+      </MDBox>
 
-    </Card>
-    </Grid>
-    </Grid>
+
+</div>
+
+
+
   );
 }
 
 // Setting default props for the EventInfoList
 EventInfoList.defaultProps = {
-  shadow: true,
+
 };
 
 // Typechecking props for the EventInfoList
 EventInfoList.propTypes = {
   title: PropTypes.string.isRequired,
   profiles: PropTypes.arrayOf(PropTypes.object).isRequired,
-  shadow: PropTypes.bool,
-};
+}
 
 export default EventInfoList;
