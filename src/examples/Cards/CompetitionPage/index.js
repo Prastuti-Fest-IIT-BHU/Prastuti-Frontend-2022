@@ -20,23 +20,22 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 
 
-function DefaultProjectCard({ image, title, description, action }) {
+function DefaultProjectCard({ title, description, action }) {
 
   const { width } = useWindowDimensions();
   let PaddingLeft
   let MarginPhone
-  let Pageimg
+
   if(width<1196 )
   {
     PaddingLeft="5%"
-    MarginPhone="1"
-    Pageimg="5"
+    MarginPhone="5%"
 
   }
   else
   {
-    PaddingLeft="21%"
-    Pageimg="20%"
+    PaddingLeft="19%"
+    MarginPhone="2%"
   }
 
   return (
@@ -61,6 +60,7 @@ function DefaultProjectCard({ image, title, description, action }) {
     backgroundSize: "cover",
     backgroundPosition: "50%",
     overflow: "hidden",
+    mt: 3,
   }}
 />
     <Card
@@ -80,14 +80,8 @@ function DefaultProjectCard({ image, title, description, action }) {
 
 
         <CardMedia
-          src={image}
-          component="img"
           title={title}
           sx={{
-            maxWidth: "95%",
-            margin: 5,
-            marginLeft:  `${Pageimg}`,
-            marginRight:  `${Pageimg}`,
             boxShadow: ({ boxShadows: { md } }) => md,
             justifyContent: "center",
             display:"flex",
@@ -99,27 +93,35 @@ function DefaultProjectCard({ image, title, description, action }) {
       <MDBox mt={1} mx={0.5} justifyContent="center">
 <div style={{ display:'flex', justifyContent:'center' }}>
 
-    <Tilt className="Tilt" options={{ max : 25, scale: 2}}>
-        <MDBox mb={1}>
+
+        <MDBox mb={3} >
             <MDTypography
               component="a"
               href={action.route}
               target="_blank"
               rel="noreferrer"
-              variant="h5"
+              variant="h3"
               textTransform="capitalize"
-              justifyContent="center"
             >
               {title}
             </MDTypography>
 
         </MDBox>
-      </Tilt>
+
         </div>
         <MDBox mb={3} lineHeight={0} justifyContent="center" sx={{
           marginLeft: 3,
           marginRight:3,
         }}>
+          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+            {description}
+          </MDTypography>
+          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+            {description}
+          </MDTypography>
+          <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+            {description}
+          </MDTypography>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
             {description}
           </MDTypography>
@@ -176,7 +178,6 @@ function DefaultProjectCard({ image, title, description, action }) {
 
 // Typechecking props for the DefaultProjectCard
 DefaultProjectCard.propTypes = {
-  image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   action: PropTypes.shape({
