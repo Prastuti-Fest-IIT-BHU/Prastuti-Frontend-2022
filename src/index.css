@@ -47,3 +47,40 @@ width: 115%;
 }
 
 /* ------------------------------------------------ */
+
+
+/* competition page font size and weights */
+
+
+.heading_competiton_page_head{
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.6rem;;
+ font-weight: 700;
+}
+
+
+.content_competiton_page_cont{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1rem;
+    color: black;
+}
+
+
+.content_competiton_page_cont_coor{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1.1rem;
+    color: black;
+}
+
+
+.content_competiton_page_cont_coor_cont{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 0.9rem;
+    color: black;
+}
+
+/* ----------------------------------------------------------- */

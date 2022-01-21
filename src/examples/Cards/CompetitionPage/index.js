@@ -97,7 +97,7 @@ function DefaultProjectCard({ title, description }) {
 
 
         <MDBox mb={3}  >
-            <div className="heading competiton_page_head">
+            <div className="heading_competiton_page_head">
               {title}
           </div>
 
@@ -109,7 +109,7 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-          <div className="content competiton_page_cont">
+          <div className="content_competiton_page_cont">
             {description}
             </div>
           </MDTypography>
@@ -120,7 +120,7 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-          <div className="content competiton_page_cont_coor">
+          <div className="content_competiton_page_cont_coor">
             Coordinators:
             </div>
           </MDTypography>
@@ -130,7 +130,7 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-            <div className="content competiton_page_cont_coor">
+            <div className="content_competiton_page_cont_coor_cont">
             Coordinator name ;    04045300
               </div>
           </MDTypography>
