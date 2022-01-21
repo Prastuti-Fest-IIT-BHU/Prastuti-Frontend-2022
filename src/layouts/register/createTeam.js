@@ -48,7 +48,7 @@ function CreateTeam() {
             <MDBox mt={4} mb={1}>
 
 
-              <MDButton variant="outlined" color="info" fullWidth>
+              <MDButton variant="outlined" color="success" fullWidth>
                 Create the team!
               </MDButton>
             </MDBox>

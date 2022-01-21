@@ -36,7 +36,7 @@ function TeamRegister() {
               gap:2,
             }} >
 
-              <MDButton variant="outlined" color="info" href="/create-team" mb={5} >
+              <MDButton variant="outlined" color="success" href="/create-team" mb={5} >
                 Create a team
               </MDButton>
             </MDBox>
