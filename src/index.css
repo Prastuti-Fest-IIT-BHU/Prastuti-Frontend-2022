@@ -1,8 +1,49 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 
 
-body{
+/* Generic fonts for the whole website */
 
-font-family: 'Neonderthaw', cursive;
+/*-------------------------------------------------*/
+
+/* competition card  font size and weights resposnsive behave*/
+
+
+.heading_competition_card{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.3rem;
 }
+
+.content_competition_card{
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1rem;
+    color: black;
+}
+
+.sub_heading_competition_card{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.card_{
+
+width: 115%;
+
+}
+
+
+@media only screen and (max-width: 1096px) {
+  .card_{
+
+  width: 100%;
+  }
+}
+
+/* ------------------------------------------------ */

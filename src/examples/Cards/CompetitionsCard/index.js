@@ -6,7 +6,7 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import Tilt from 'react-tilt';
 import Button from 'react-bootstrap/Button';
-import "./competitioncard.css";
+
 
 /*  <MDTypography variant="button" fontWeight="bold" color="text" ><Link to= "/codigo">Learn More </Link></MDTypography> */
 
@@ -64,7 +64,7 @@ function CompetitionCard({ image, label, title, description, action}) {
               to={action.route}
               variant="h3"
               textTransform="capitalize"
-            ><div className="cardname">
+            ><div className="heading_competition_card">
               {title}
               </div>
             </MDTypography>
@@ -76,18 +76,18 @@ function CompetitionCard({ image, label, title, description, action}) {
               rel="noreferrer"
               variant="h4"
               textTransform="capitalize"
-            ><div className="cardname">
+            ><div className="heading_competition_card">
               {title}
                 </div>
             </MDTypography>
           )}
         </MDBox>
         <MDTypography variant="button" fontWeight="regular" color="black" textTransform="capitalize">
-          <div className="sub_head">{label}</div>
+          <div className="sub_heading_competition_card">{label}</div>
         </MDTypography>
         <MDBox  lineHeight={0} py={3}>
           <MDTypography variant="button" fontWeight="normal" color="text" >
-          <div className="content_car">
+          <div className="content_competition_card">
           {description}</div> </MDTypography>
 
         </MDBox>
@@ -104,9 +104,12 @@ function CompetitionCard({ image, label, title, description, action}) {
            0 partcipants registered till now
            </MDTypography>
 
-          </MDBox></div><div className="col-5">  <MDBox  py={2}  sx={{ marginLeft:`${btns}`}}>
-              <Button variant="outline-info" className="float-right" href="/codigo">Explore</Button>
-              </MDBox ></div></div>
+          </MDBox></div><div className="col-5">
+<Tilt className="Tilt" options={{ max : 25, scale: 1.2}}>
+           <MDBox  py={2}  sx={{ marginLeft:`${btns}`}}>
+              <Button variant="outline-primary" className="float-right" href="/codigo">Explore</Button>
+              </MDBox >
+                  </Tilt></div></div>
 
 
       </MDBox>
