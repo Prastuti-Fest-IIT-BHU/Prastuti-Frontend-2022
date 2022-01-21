@@ -141,7 +141,7 @@ function DefaultProjectCard({ title, description }) {
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
           gap:2, mb:3,
         }}>
-        <Button variant="outline-primary" >Register</Button>
+        <Button variant="outline-primary"  href="create-team">Register</Button>
 
         </MDBox>
         </Tilt>
