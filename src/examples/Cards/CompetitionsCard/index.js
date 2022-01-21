@@ -22,7 +22,7 @@ function CompetitionCard({ image, label, title, description, action}) {
   {
     displayType="column"
     imgw="100%"
-    btns="35%"
+    btns="28%"
   }
   else
   {
@@ -99,7 +99,7 @@ function CompetitionCard({ image, label, title, description, action}) {
         <div className="row">
         <div className="col-7">
          <MDBox mb={1} lineHeight={0} py={2}>
-          <MDTypography variant="h6" fontWeight="bold" color="text" >
+          <MDTypography variant="h6" fontWeight="normal" color="text" >
 
            0 partcipants registered till now
            </MDTypography>
@@ -107,7 +107,7 @@ function CompetitionCard({ image, label, title, description, action}) {
           </MDBox></div><div className="col-5">
 <Tilt className="Tilt" options={{ max : 25, scale: 1.2}}>
            <MDBox  py={2}  sx={{ marginLeft:`${btns}`}}>
-              <Button variant="outline-primary" className="float-right" href="/codigo">Explore</Button>
+              <Button variant="outline-primary" className="float-left" href="/codigo">Explore</Button>
               </MDBox >
                   </Tilt></div></div>
 
