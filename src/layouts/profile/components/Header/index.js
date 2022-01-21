@@ -1,6 +1,5 @@
 
 
-import "./header.css";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
@@ -58,12 +57,12 @@ function Header({ children }) {
           <Grid item>
             <MDBox height="100%" mt={0.5} lineHeight={1}>
               <MDTypography variant="h5" fontWeight="medium">
-              <div className="name">
+              <div className="profile_name">
                 Vaibhav Singh
                 </div>
               </MDTypography>
               <MDTypography variant="button" color="text" fontWeight="regular">
-              <div className="emai_id">
+              <div className="profile_emai_id">
                 email id
               </div>
               </MDTypography>

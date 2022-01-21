@@ -1,7 +1,6 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable prefer-const */
 /* eslint-disable no-unused-vars */
-import "./leader.css";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import * as React from 'react';

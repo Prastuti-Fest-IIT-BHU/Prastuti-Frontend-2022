@@ -13,6 +13,14 @@ import TeamsInfo from "layouts/teams";
 const routes = [
   {
     type: "collapse",
+    name: "Profile",
+    key: "profile",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/profile",
+    component: <Profile />,
+  },
+  {
+    type: "collapse",
     name: "Events",
     key: "events",
     icon: <Icon fontSize="small">dashboard</Icon>,
@@ -27,14 +35,7 @@ const routes = [
     route: "/tables",
     component: <Tables />,
   },
-  {
-    type: "collapse",
-    name: "Profile",
-    key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
-    component: <Profile />,
-  },
+
 
   {
     type: "collapse",

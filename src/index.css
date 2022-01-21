@@ -1,8 +1,224 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Generic fonts for the whole website */
+
+/*-------------------------------------------------*/
+
+/* competition card  font size and weights resposnsive behave*/
 
 
-body{
-
-font-family: 'Neonderthaw', cursive;
+.heading_competition_card{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.3rem;
 }
+
+.content_competition_card{
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1rem;
+    color: black;
+}
+
+.sub_heading_competition_card{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.card_{
+
+width: 115%;
+
+}
+
+
+@media only screen and (max-width: 1096px) {
+  .card_{
+
+  width: 100%;
+  }
+}
+
+/* ------------------------------------------------ */
+
+
+/* competition page font size and weights */
+
+
+.heading_competiton_page_head{
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.6rem;;
+ font-weight: 700;
+}
+
+
+.content_competiton_page_cont{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1rem;
+    color: black;
+}
+
+
+.content_competiton_page_cont_coor{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 1.1rem;
+    color: black;
+}
+
+
+.content_competiton_page_cont_coor_cont{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+    font-size: 0.9rem;
+    color: black;
+}
+
+/* ----------------------------------------------------------- */
+
+
+
+/* profile page font size and weights */
+
+.profile_name{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;;
+ font-weight: 600;
+}
+
+.profile_emai_id{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+
+}
+
+
+.profile_registered_in{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.profile_event_name{
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(63, 64, 57);
+}
+
+.profile_team{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.profile_team_name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(63, 64, 57);
+}
+
+.profile_team_member{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 0.8rem;
+    color: rgb(63, 64, 57);
+
+}
+
+.profile_request{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.profile_sender_name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(63, 64, 57);
+}
+
+.profile_sender_email{
+  /*  the id that is being displayed as insti name of the senders */
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* leaderboard css */
+
+.leader_participant_name{
+
+}
+
+.leader_participant_email{
+
+}
+
+.leader_participant_clg{
+
+}
+
+.leader_participant_no_of_events{
+
+}
+
+.leader_participant_score{
+
+}
+
+
+/* -------------------------------------------------------------------------------*/
+
+
+/* Teams page css */
+.teams_team_name{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;;
+ font-weight: 600;
+}
+
+.teams_pending_request_heading{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.teams_team_memebers_heading{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+
+.teams_sent_accept_pending_request_name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(63, 64, 57);
+}
+
+.teams_sent_accept_pending_request_email{
+
+}
+/*--------------------------------------------------------------------------------------*/

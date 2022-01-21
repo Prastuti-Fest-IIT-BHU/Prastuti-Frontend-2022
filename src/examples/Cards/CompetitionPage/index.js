@@ -19,7 +19,6 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import "./competitionpage.css";
 
 
 
@@ -98,7 +97,7 @@ function DefaultProjectCard({ title, description }) {
 
 
         <MDBox mb={3}  >
-            <div className="heading_competition_page">
+            <div className="heading_competiton_page_head">
               {title}
           </div>
 
@@ -110,7 +109,7 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
-          <div className="content">
+          <div className="content_competiton_page_cont">
             {description}
             </div>
           </MDTypography>
@@ -121,7 +120,9 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+          <div className="content_competiton_page_cont_coor">
             Coordinators:
+            </div>
           </MDTypography>
         </MDBox>
         <MDBox   mb={2} lineHeight={0} justifyContent="center" sx={{
@@ -129,7 +130,9 @@ function DefaultProjectCard({ title, description }) {
           marginRight:3,
         }}>
           <MDTypography variant="button" fontWeight="light" color="text" justifyContent="center">
+            <div className="content_competiton_page_cont_coor_cont">
             Coordinator name ;    04045300
+              </div>
           </MDTypography>
         </MDBox>
 
@@ -138,7 +141,7 @@ function DefaultProjectCard({ title, description }) {
         <MDBox display="flex" justifyContent="space-between" alignItems="center" sx={{
           gap:2, mb:3,
         }}>
-        <Button variant="outline-info" className="float-right">Register</Button>
+        <Button variant="outline-primary"  href="create-team">Register</Button>
 
         </MDBox>
         </Tilt>

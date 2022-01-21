@@ -10,9 +10,12 @@ export default function data() {
     <MDBox display="flex" alignItems="center" lineHeight={1}>
       <MDBox ml={2} lineHeight={1}>
         <MDTypography display="block" variant="button" fontWeight="medium">
+        <div className="leader_participant_name">
           {name}
+          </div>
         </MDTypography>
-        <MDTypography variant="caption">{email}</MDTypography>
+        <MDTypography variant="caption">
+          <div className="leader_participant_email">{email}</div></MDTypography>
       </MDBox>
     </MDBox>
   );
@@ -20,8 +23,10 @@ export default function data() {
 
   const Job = ({ title }) => (
     <MDBox lineHeight={1} textAlign="left">
-      <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
+      <MDTypography display="block" variant="caption" color="black" fontWeight="light">
+      <div className="leader_participant_clg">
         {title}
+        </div>
       </MDTypography>
     </MDBox>
   );
@@ -38,57 +43,48 @@ export default function data() {
         author: <Author name="John Michael" email="john@creative-tim.com" />,
         function: <Job title="Manager"  />,
         employed: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+          <MDTypography component="a" href="#" variant="caption" color="black" fontWeight="light">
             2304
           </MDTypography>
         ),
       },
       {
-        author: <Author name="Alexa Liras" email="alexa@creative-tim.com" />,
-        function: <Job title="Programator" />,
+        author: <Author name="John Michael" email="john@creative-tim.com" />,
+        function: <Job title="Manager"  />,
         employed: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            1119
+          <MDTypography component="a" href="#" variant="caption" color="black" fontWeight="light">
+            2304
           </MDTypography>
         ),
       },
       {
-        author: <Author name="Laurent Perrier" email="laurent@creative-tim.com" />,
-        function: <Job title="Executive"  />,
+        author: <Author name="John Michael" email="john@creative-tim.com" />,
+        function: <Job title="Manager"  />,
         employed: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            1917
+          <MDTypography component="a" href="#" variant="caption" color="black" fontWeight="light">
+            2304
           </MDTypography>
         ),
       },
       {
-        author: <Author name="Michael Levi" email="michael@creative-tim.com" />,
-        function: <Job title="Programator" />,
+        author: <Author name="John Michael" email="john@creative-tim.com" />,
+        function: <Job title="Manager"  />,
         employed: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            2408
+          <MDTypography component="a" href="#" variant="caption" color="black" fontWeight="light">
+            2304
           </MDTypography>
         ),
       },
       {
-        author: <Author name="Richard Gran" email="richard@creative-tim.com" />,
-        function: <Job title="Manager"/>,
+        author: <Author name="John Michael" email="john@creative-tim.com" />,
+        function: <Job title="Manager"  />,
         employed: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            0421
+          <MDTypography component="a" href="#" variant="caption" color="black" fontWeight="light">
+            2304
           </MDTypography>
         ),
       },
-      {
-        author: <Author  name="Miriam Eric" email="miriam@creative-tim.com" />,
-        function: <Job title="Programator"  />,
-        employed: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            1420
-          </MDTypography>
-        ),
 
-      },
     ],
   };
 }
