@@ -28,14 +28,12 @@ function TeamRegister() {
           </MDTypography>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
-            <MDBox mt={4} mb={1} display="flex" flexDirection="column" 
+            <MDBox mt={4} mb={1} display="flex" flexDirection="column"
             sx={{
               gap:2,
             }} >
-              <MDButton variant="gradient" color="info" p="3" href="/join-team">
-                Join a team
-              </MDButton>
-              <MDButton variant="gradient" color="info" href="/create-team"  >
+
+              <MDButton variant="gradient" color="info" href="/create-team" mb={5} >
                 Create a team
               </MDButton>
             </MDBox>
