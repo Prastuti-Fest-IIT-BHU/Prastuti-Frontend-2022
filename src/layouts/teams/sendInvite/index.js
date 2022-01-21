@@ -3,13 +3,17 @@
 import Grid from "@mui/material/Grid";
 // import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
+import Button from 'react-bootstrap/Button';
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
 
 import MDInput from "components/MDInput";
+import Tilt from 'react-tilt';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import { Component } from "react";
 // import { useState } from "react";
 
@@ -41,7 +45,7 @@ function SendInvite() {
               p={2}
               sx={{
                 border: ({ borders: { borderWidth, borderColor } }) =>
-                  `${borderWidth[1]} solid ${borderColor}`, 
+                  `${borderWidth[1]} solid ${borderColor}`,
               }}
             >
               <form >
@@ -50,10 +54,18 @@ function SendInvite() {
               <MDInput />
               </Tooltip>
             </MDBox>
-              <MDButton variant="outlined" color="black" outlined="true"  sx={{
-                marginTop : 1.5, marginLeft: 6.2, marginRight: 6.2
+              <MDBox sx={{
+                marginTop : 1.5, marginLeft: 6.7, marginRight: 6.2
               }}
-                >Send Invite</MDButton>
+                >
+                <Tilt className="Tilt" options={{ max : 25, scale: 1.2}}>
+
+                <Button variant="outline-primary" >
+
+                Send Invite
+              </Button>
+            </Tilt>
+          </MDBox>
               </form>
             </MDBox>
           </Grid>

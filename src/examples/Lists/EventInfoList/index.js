@@ -8,7 +8,6 @@ import PropTypes from "prop-types";
 
 // @mui material components
 
-import "./team_name.css";
 
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
@@ -26,10 +25,14 @@ function EventInfoList({ title, profiles}) {
       </MDBox>
       <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={2} r={3} >
         <MDTypography variant="button" fontWeight="medium">
+        <div className="teams_sent_accept_pending_request_name">
           {name}
+          </div>
         </MDTypography>
         <MDTypography variant="caption" color="text">
+        <div className="teams_sent_accept_pending_request_email">
           {description}
+        </div>
         </MDTypography>
       </MDBox>
 
@@ -49,7 +52,7 @@ function EventInfoList({ title, profiles}) {
 
 
       <MDBox mb={4} >
-        <MDTypography align="center"><div className="team_name">Team Name</div></MDTypography>
+        <MDTypography align="center"><div className="teams_team_name">Team Name</div></MDTypography>
       </MDBox>
       <MDBox mt={3} >
             <SendInvite/>
@@ -64,11 +67,14 @@ function EventInfoList({ title, profiles}) {
 
                 <MDBox pt={2} px={2}>
                   <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
+                  <div className="teams_pending_request_heading">
                     {title}
+                    </div>
                   </MDTypography>
                </MDBox>
                <MDBox p={2}>
                  <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+
                     {renderProfiles}
                  </MDBox>
 
@@ -79,7 +85,10 @@ function EventInfoList({ title, profiles}) {
 
              <MDBox pt={2} px={2}>
                <MDTypography variant="h6" fontWeight="normal" textTransform="capitalize" color="black" >
+               <div className="teams_team_memebers_heading">
+
                     Team Members
+              </div>
                </MDTypography>
              </MDBox>
              <MDBox p={2}>

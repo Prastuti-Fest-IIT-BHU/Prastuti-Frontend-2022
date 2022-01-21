@@ -187,3 +187,38 @@ width: 115%;
 
 
 /* -------------------------------------------------------------------------------*/
+
+
+/* Teams page css */
+.teams_team_name{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;;
+ font-weight: 600;
+}
+
+.teams_pending_request_heading{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.teams_team_memebers_heading{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+}
+
+
+.teams_sent_accept_pending_request_name{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(63, 64, 57);
+}
+
+.teams_sent_accept_pending_request_email{
+
+}
+/*--------------------------------------------------------------------------------------*/
