@@ -1,6 +1,5 @@
  // prettier-ignore
 // react-routers components
-import "./profilelist.css";
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 
@@ -32,12 +31,12 @@ function ProfilesList({ title, profiles, shadow }) {
       </MDBox>
       <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={2} r={3} >
         <MDTypography variant="button" fontWeight="medium">
-        <div className="sender_name">
+        <div className="profile_sender_name">
           {name}
         </div>
         </MDTypography>
         <MDTypography variant="caption" color="text">
-        <div className="email_sender">
+        <div className="profile_sender_email">
           {description}
         </div>
         </MDTypography>
@@ -70,7 +69,7 @@ function ProfilesList({ title, profiles, shadow }) {
     <Card sx={{ height: "100%", boxShadow: !shadow && "none" }}>
       <MDBox pt={2} px={2}>
         <MDTypography variant="h5" fontWeight="medium" textTransform="capitalize" color="black" textGradient>
-        <div className="request">
+        <div className="profile_request">
           {title}
           </div>
         </MDTypography>
