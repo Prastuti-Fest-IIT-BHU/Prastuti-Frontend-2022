@@ -1,0 +1,126 @@
+17moons documentation on front end:
+
+few notes:
+1>  a lot of npm 14 dependent depedencies are involved so use npm install --force
+2>  chalk error can be fixed with force install too
+
+
+Framerworks used
+
+ 1> bootstrap
+ 2> material UI
+ 3> Tilt js
+ 4> Angular
+ 5> React
+
+
+all the routes are defined in routes.js in src folder
+
+ page wise documentations:
+
+
+ 1. Profile page :
+
+                route  /profile
+
+                location :                            src > layout> profile
+
+                 file wise documentation :
+
+                 a) Header> index.js     :         is being used to render the avatar image and profile name and email and image on top with a lower z index than rest of the card:
+                                                   image can be changed by redefining the path of the  image
+                                                   MDAvatar would need to be deleted and also remove the import to use image from google auth
+                                                   Name and Email values are hardcoded
+
+                b) PlatformSettings> index.js   : is being used to render the left half of the page i.e. Team Name and Registered Event list
+                                                  Values are hard coded
+
+
+                c)data> profilelistData.js   : jst used to send data to be render consisting the sender name avatar and email ( currently in name of Indian Institute of Technology BHU)
+
+                d) Profile> index.js          : calling the dashnav , header , profilesetting
+                                                profilesetting is recalling the file layouts/profile/components/PlatformSettings    and examples/Lists/ProfilesList
+
+                                                first one is already seen in point b
+
+                                                for latter profile list data is being used to render the requests by mapping over the data set used in point c
+
+
+
+  2. Events Cards:
+
+
+
+            route:   /events
+
+            location:    props passing file : src> layouts> dashboards> index.js
+
+                         rendering file:      src>examples>cards>competition cards> index.js
+                                              have some hard coded data like the number of participants and rest is jst basic css and calling of props
+                                              this card button is sent to competition page: in this case // codigo page
+
+
+
+   3. Events Page:
+
+           route:   /codigo
+
+           location:   props passing file :    src> layouts > competition> codigo.js
+
+                       rendering file or functioning file :   src> examples> cards > competitionpage> index.js
+
+                                                              taking data frm the prop passing file and styling it and also the iamge rendered in the background is called here
+                                                              the button redirects to /team-register
+
+
+   4: Register-team
+
+          route: /register-team
+
+          location : src> lauouts> register > teamRegister.js
+
+                     nothing much to say jst rendering a card with one button
+
+
+   5: LeaderBoard :
+
+        route: /tables
+
+        location : src>layouts> tables >index.js
+
+                  tables folder have two data files
+                    author table file = global leader board and
+                    project table = event leader board
+
+                  index js iterate over the dropdown menu and renders the author table and the project table
+
+
+   6:  Teams:
+
+
+    route: /teams
+
+
+       location: src> layouts> teams
+
+          in folder sendinvite >index.js  : renders the top part of the page where you can enter email and send invite
+
+          index.js in teams folder :   renders the cards and calls list eventinfolist located at examplex\Lists\EventInfoList
+
+                              Eventinfo list:  extracts data from a data file and style is in a grid and renders it
+
+
+
+
+  routes can be redefined in routes.js
+
+  css can be redefined in index.css located in src
+
+  each page has its own subpart in index .css to please do read the comment before making any changes
+
+
+  further documentation of template:
+  https://www.creative-tim.com/learning-lab/react/colors/material-dashboard/
+
+
+  ............................................................................................................................................................................................
