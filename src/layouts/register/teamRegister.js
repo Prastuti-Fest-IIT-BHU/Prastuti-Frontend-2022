@@ -28,14 +28,14 @@ function CreateTeam() {
             Register with your squad !
           </MDTypography>
         </MDBox>
-        <MDBox pt={4} pb={3} px={3}>
+        <MDBox pt={4} pb={1} px={3}>
           <MDBox component="form" role="form">
-            <MDBox mb={2} sx={{marginLeft: '25%',}}>
+            <MDBox mb={2} sx={{marginLeft: '24%',}}>
             <div className="select_team">Select your team</div>
             <MDBox py={1} pl={3}>
             <form>
         <select name = "dropdown">
-           <option value = "Computer Architecture" selected>Click here</option>
+           <option value = "Click here" selected>Click here</option>
            <option value = "Java">IIT</option>
            <option value = "Discrete Mathematics">BHU</option>
         </select>
@@ -56,11 +56,11 @@ function CreateTeam() {
 
           <hr />
           <div className="row">
-          <div className="col-8">
-          <p className="gonna_cry">Want to create a new team ? </p>
+          <div className="col-7">
+          <p className="gonna_cry">Create a new team ? </p>
           </div>
-          <div className="col-4">
-          <button type="button" className="btn btn-outline-primary">
+          <div className="col-5">
+          <button type="button" className="btn btn-outline-success">
           <div className="new_tm_txt">
                 Click here
                 </div>

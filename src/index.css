@@ -222,3 +222,29 @@ width: 115%;
 
 }
 /*--------------------------------------------------------------------------------------*/
+
+/* Team register card */
+
+.select_team{
+
+    font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: black;
+}
+
+.dropdown{
+  font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 0.1rem;
+    color: black;
+
+}
+
+.gonna_cry{
+  padding-top: 7px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 1rem;
+    color: black;
+}
