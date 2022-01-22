@@ -7,7 +7,7 @@ import BasicLayout from "layouts/authentication/components/BasicLayout";
 import Tilt from 'react-tilt';
 
 // Images
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import bgImage from "../../assets/images/registerbg/newbg.jfif";
 
 function CreateTeam() {
 

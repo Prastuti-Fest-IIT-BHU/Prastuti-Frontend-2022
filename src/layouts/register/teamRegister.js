@@ -1,49 +1,78 @@
-// import { Link } from "react-router-dom";
+
 import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import BasicLayout from "layouts/authentication/components/BasicLayout";
 import Tilt from 'react-tilt';
-// Images
-import bgImage from "assets/images/bg-sign-up-cover.jpeg";
 
-function TeamRegister() {
+// Images
+import bgImage from "../../assets/images/registerbg/newbg.jfif";
+
+function CreateTeam() {
+
   return (
-    <CoverLayout image={bgImage}>
+    <BasicLayout image={bgImage}>
       <Card>
         <MDBox
           variant="gradient"
           bgColor="info"
           borderRadius="lg"
-          coloredShadow="success"
+          coloredShadow="info"
           mx={2}
           mt={-3}
-          p={3}
+          p={2}
           mb={1}
           textAlign="center"
         >
           <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-
-            Register for Codigo!
-
+            Register with your squad !
           </MDTypography>
         </MDBox>
-        <Tilt className="Tilt" options={{ max : 25, scale: 1.05}}>
-
         <MDBox pt={4} pb={3} px={3}>
-            <MDBox mt={4} ml={3} mb={1} display="flex" flexDirection="column" >
+          <MDBox component="form" role="form">
+            <MDBox mb={2} sx={{marginLeft: '25%',}}>
+            <div className="select_team">Select your team</div>
+            <MDBox py={1} pl={3}>
+            <form>
+        <select name = "dropdown">
+           <option value = "Computer Architecture" selected>Click here</option>
+           <option value = "Java">IIT</option>
+           <option value = "Discrete Mathematics">BHU</option>
+        </select>
+     </form>
+     </MDBox>
+            </MDBox>
+              <Tilt className="Tilt" options={{ max : 25, scale: 1.02}}>
+                    <MDBox pt={1.5}  px={3}>
+                        <MDBox  ml={2} mb={1} display="flex" flexDirection="column" >
+          <button type="button" className="btn btn-outline-primary btn-lg btn-block">
+                Register
+              </button>
 
-            <button type="button" className="btn btn-outline-primary btn-lg btn-block">
-                Create a team
-            </button>
             </MDBox>
 
         </MDBox>
-        </Tilt>
+            </Tilt>
 
+          <hr />
+          <div className="row">
+          <div className="col-8">
+          <p className="gonna_cry">Want to create a new team ? </p>
+          </div>
+          <div className="col-4">
+          <button type="button" className="btn btn-outline-primary">
+          <div className="new_tm_txt">
+                Click here
+                </div>
+              </button>
+              </div>
+</div>
+
+          </MDBox>
+        </MDBox>
       </Card>
-    </CoverLayout>
+    </BasicLayout>
   );
 }
 
-export default TeamRegister;
+export default CreateTeam;
