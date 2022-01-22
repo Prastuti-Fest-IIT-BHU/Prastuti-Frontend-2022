@@ -44,7 +44,7 @@ function CreateTeam() {
             </MDBox>
               <Tilt className="Tilt" options={{ max : 25, scale: 1.02}}>
                     <MDBox pt={1.5}  px={3}>
-                        <MDBox  ml={2} mb={1} display="flex" flexDirection="column" >
+                        <MDBox  ml={1} mr={1} mb={1} display="flex" flexDirection="column" >
           <button type="button" className="btn btn-outline-primary btn-lg btn-block">
                 Register
               </button>
