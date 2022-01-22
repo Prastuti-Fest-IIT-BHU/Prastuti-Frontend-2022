@@ -44,11 +44,13 @@ function CreateTeam() {
               <MDInput type="password" label="Create a unique Team Code" fullWidth />
             </MDBox> */}
               <Tilt className="Tilt" options={{ max : 25, scale: 1.02}}>
-                    <MDBox pt={3} pb={2} px={3}>
-                        <MDBox  ml={2} mb={1} display="flex" flexDirection="column" >
-          <button type="button" className="btn btn-outline-primary btn-lg btn-block">
+                    <MDBox pt={3} pb={2} >
+                        <MDBox  mb={1} display="flex" flexDirection="column" sx={{ marginLeft: "22%",}} >
+                        <a href="team/:team_name" >
+               <button type="button" className="btn btn-outline-primary btn-lg btn-block">
                 Create the team!
               </button>
+              </a>
 
             </MDBox>
 

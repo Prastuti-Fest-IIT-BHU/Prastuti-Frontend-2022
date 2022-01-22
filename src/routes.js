@@ -8,6 +8,7 @@ import EventPage from "layouts/competitions/eventPage";
 import CoreTeam from "layouts/core/coreteam";
 import TeamsInfo from "layouts/teams";
 
+
 const routes = [
   {
     type: "collapse",
@@ -84,6 +85,7 @@ const routes = [
     route: "/create-team",
     component: <CreateTeam />,
   },
+
 ];
 
 export default routes;

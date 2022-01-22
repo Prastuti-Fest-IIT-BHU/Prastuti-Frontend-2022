@@ -13,6 +13,12 @@
 
 /* competition card  font size and weights resposnsive behave*/
 
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+
 
 .heading_competition_card{
   font-family: 'Raleway', sans-serif;
@@ -232,6 +238,7 @@ width: 115%;
       font-size: 1.3rem;
       color: black;
 }
+
 
 
 

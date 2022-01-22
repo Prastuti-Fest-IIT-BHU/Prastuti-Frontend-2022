@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import BasicLayout from "layouts/authentication/components/BasicLayout";
+
 import Tilt from 'react-tilt';
 
 // Images
@@ -70,11 +71,7 @@ function CreateTeam() {
           <p className="gonna_cry">Create a new team ? </p>
           </div>
           <div className="col-5">
-          <button type="button" className="btn btn-outline-success">
-          <div className="new_tm_txt">
-                Click here
-                </div>
-              </button>
+        <a href="create-team" className="hover_wt">  <button type="button" className="btn btn-outline-success" > Click here</button></a>
               </div>
 </div>
 

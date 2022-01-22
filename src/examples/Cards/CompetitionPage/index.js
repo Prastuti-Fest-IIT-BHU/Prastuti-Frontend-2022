@@ -19,7 +19,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function DefaultProjectCard({ title, description }) {
+function DefaultProjectCard({ title, description, action }) {
   const { width } = useWindowDimensions();
   let PaddingLeft;
   let MarginPhone;
@@ -130,7 +130,7 @@ function DefaultProjectCard({ title, description }) {
                       mb: 3,
                     }}
                   >
-                    <Button variant='outline-primary' href='create-team'>
+                    <Button variant='outline-primary' href={action.route}>
                       Register
                     </Button>
                   </MDBox>
