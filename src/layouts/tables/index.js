@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 // Prastuti  2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
@@ -23,12 +23,9 @@ import projectsTableData from "layouts/tables/data/projectsTableData";
 function Tables() {
   const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const [eventClassname, setEventClassname] = React.useState("Event 1");
-    // const [display, setDisplay] = React.useState("none");
-
-
-
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [eventClassname, setEventClassname] = React.useState("Global Leaderboard");
+  // const [display, setDisplay] = React.useState("none");
 
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -39,198 +36,312 @@ function Tables() {
     setAnchorEl(null);
   };
 
-  const handleClass=(className)=>{
+  const handleClass = (className) => {
     setEventClassname(className);
-
-
-  }
+  };
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox>
-
-<div marginBottom={3}>
-      <Button
-        id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-      <div className="drop_down">
-        Select your event  <i className="fas fa-caret-down" />
+        <div marginBottom={3}>
+          <Button
+            id='demo-positioned-button'
+            aria-controls={open ? "demo-positioned-menu" : undefined}
+            aria-haspopup='true'
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          >
+            <div className='drop_down'>
+              Select your event <i className='fas fa-caret-down' />
+            </div>
+          </Button>
+          <Menu
+            id='demo-positioned-menu'
+            aria-labelledby='demo-positioned-button'
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+          >
+            {" "}
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("Global Leaderboard");
+              }}
+            >
+              Global
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("Codigo");
+              }}
+            >
+              Codigo
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("Consilium");
+              }}
+            >
+              Consilium
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("Cryptex");
+              }}
+            >
+              Cryptex
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("HackOverflow");
+              }}
+            >
+              HackOverflow
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("Recognizance");
+              }}
+            >
+              Recognizance
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                handleClass("Simulim");
+              }}
+            >
+              Simulim
+            </MenuItem>
+          </Menu>
         </div>
-      </Button>
-      <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-      >
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Event 3");
-          }}>Event 3</MenuItem>
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Event 1");
-          }}>Event 1</MenuItem>
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Event 2");
-          }}>Event 2</MenuItem>
-          <MenuItem onClick={()=>{
-            handleClose();
-            handleClass("Global Leaderboard");
-          }}>Global</MenuItem>
-      </Menu>
-    </div>
 
-{
-
-// eslint-disable-next-line no-nested-ternary
-eventClassname==="Event 1"? (
-    <Grid item xs={12}>
-            <Card>
-              <MDBox
-                mx={2}
-                mt={1}
-                py={3}
-                px={2}
-                variant="gradient"
-                bgColor="dark"
-                borderRadius="lg"
-                coloredShadow="info"
-                className="Event 1"
-              >
-                <MDTypography variant="h6" color="white" >
-                  Event 1 Leaderboard
-                </MDTypography>
-              </MDBox>
-              <MDBox pt={2}>
-                <DataTable
-                  table={{ columns: pColumns, rows: pRows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
-                />
-              </MDBox>
-            </Card>
-
-
-          </Grid>
-) :(eventClassname==="Global Leaderboard" ? (
+        {
+          // eslint-disable-next-line no-nested-ternary
+          eventClassname === "Codigo" ? (
             <Grid item xs={12}>
-            <Card>
-              <MDBox
-                mx={2}
-                mt={1}
-                py={3}
-                px={2}
-                variant="gradient"
-                bgColor="info"
-                borderRadius="lg"
-                coloredShadow="info"
-              >
-                <MDTypography variant="h6" color="white">
-                  Global Leaderboard
-                </MDTypography>
-              </MDBox>
-              <MDBox pt={3}>
-                <DataTable
-                  table={{ columns, rows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
-                />
-              </MDBox>
-            </Card>
-          </Grid>
-) :( eventClassname==="Event 2" ?(
-                <Grid item xs={12}>
-            <Card>
-              <MDBox
-                mx={2}
-                mt={1}
-                py={3}
-                px={2}
-                variant="gradient"
-                bgColor="dark"
-                borderRadius="lg"
-                coloredShadow="info"
-                className="Event 1"
-              >
-                <MDTypography variant="h6" color="white" >
-                  Event 2 Leaderboard
-                </MDTypography>
-              </MDBox>
-              <MDBox pt={2}>
-                <DataTable
-                  table={{ columns: pColumns, rows: pRows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
-                />
-              </MDBox>
-            </Card>
-
-
-          </Grid>
-):(
-  eventClassname==="Event 3"?(
-        <Grid item xs={12}>
-            <Card>
-              <MDBox
-                mx={2}
-                mt={1}
-                py={3}
-                px={2}
-                variant="gradient"
-                bgColor="dark"
-                borderRadius="lg"
-                coloredShadow="info"
-                className="Event 1"
-              >
-                <MDTypography variant="h6" color="white" >
-                  Event 3 Leaderboard
-                </MDTypography>
-              </MDBox>
-              <MDBox pt={2}>
-                <DataTable
-                  table={{ columns: pColumns, rows: pRows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
-                />
-              </MDBox>
-            </Card>
-
-
-          </Grid>
-  ): (<h1>None</h1>)
-)
-))
-
-}
-
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='dark'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                  className='Event 1'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    Codigo Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={2}>
+                  <DataTable
+                    table={{ columns: pColumns, rows: pRows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : eventClassname === "Global Leaderboard" ? (
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='info'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    Global Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={3}>
+                  <DataTable
+                    table={{ columns, rows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : eventClassname === "Consilium" ? (
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='dark'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                  className='Event 1'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    Consilium Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={2}>
+                  <DataTable
+                    table={{ columns: pColumns, rows: pRows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : eventClassname === "HackOverflow" ? (
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='dark'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                  className='Event 1'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    HackOverflow Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={2}>
+                  <DataTable
+                    table={{ columns: pColumns, rows: pRows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : eventClassname === "Cryptex" ? (
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='dark'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                  className='Event 1'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    Cryptex Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={2}>
+                  <DataTable
+                    table={{ columns: pColumns, rows: pRows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : eventClassname === "Recognizance" ? (
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='dark'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                  className='Event 1'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    Recognizance Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={2}>
+                  <DataTable
+                    table={{ columns: pColumns, rows: pRows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : eventClassname === "Simulim" ? (
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={1}
+                  py={3}
+                  px={2}
+                  variant='gradient'
+                  bgColor='dark'
+                  borderRadius='lg'
+                  coloredShadow='info'
+                  className='Event 1'
+                >
+                  <MDTypography variant='h6' color='white'>
+                    Simulim Leaderboard
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={2}>
+                  <DataTable
+                    table={{ columns: pColumns, rows: pRows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+          ) : (
+            <h1>None</h1>
+          )
+        }
       </MDBox>
 
-
-      <MDBox mt={8} pb={3}  className="Global Leaderboard" >
+      <MDBox mt={8} pb={3} className='Global Leaderboard'>
         <Grid container spacing={6}>
           {/* <Grid item xs={12}>
             <Card>
@@ -260,10 +371,7 @@ eventClassname==="Event 1"? (
             </Card>
           </Grid> */}
 
-          {
-
-
-          }
+          {}
 
           {/* <Grid item xs={12}>
             <Card>
@@ -295,7 +403,6 @@ eventClassname==="Event 1"? (
 
 
           </Grid> */}
-
         </Grid>
       </MDBox>
     </DashboardLayout>

@@ -13,6 +13,12 @@
 
 /* competition card  font size and weights resposnsive behave*/
 
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+
 
 .heading_competition_card{
   font-family: 'Raleway', sans-serif;
@@ -222,3 +228,30 @@ width: 115%;
 
 }
 /*--------------------------------------------------------------------------------------*/
+
+/* Team register card */
+
+.select_team{
+
+    font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: black;
+}
+
+
+
+
+.gonna_cry{
+  padding-top: 7px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+    font-size: 1rem;
+    color: black;
+}
+
+.custom-select {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}

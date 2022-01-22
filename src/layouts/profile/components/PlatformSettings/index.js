@@ -68,8 +68,11 @@ function PlatformSettings() {
         </MDBox>
     <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center" px={5} r={3} >
           <MDTypography variant="button" fontWeight="medium" color="text" textTransform="uppercase">
+
           <div className="profile_team_name">
+          <a href="team/:team_name">
             Team 1
+            </a>
             </div>
           </MDTypography>
           <MDTypography variant="caption" fontWeight="regular" color="text" px={3} py={0.5}>
