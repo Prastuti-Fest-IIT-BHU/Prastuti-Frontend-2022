@@ -233,13 +233,7 @@ width: 115%;
       color: black;
 }
 
-.dropdown{
-  font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 0.1rem;
-    color: black;
 
-}
 
 .gonna_cry{
   padding-top: 7px;
@@ -247,4 +241,10 @@ width: 115%;
   font-weight: 400;
     font-size: 1rem;
     color: black;
+}
+
+.custom-select {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
 }

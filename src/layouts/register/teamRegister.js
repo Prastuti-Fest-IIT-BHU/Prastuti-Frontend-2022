@@ -32,14 +32,24 @@ function CreateTeam() {
           <MDBox component="form" role="form">
             <MDBox mb={2} sx={{marginLeft: '24%',}}>
             <div className="select_team">Select your team</div>
-            <MDBox py={1} pl={3}>
-            <form>
-        <select name = "dropdown">
-           <option value = "Click here" selected>Click here</option>
-           <option value = "Java">IIT</option>
-           <option value = "Discrete Mathematics">BHU</option>
-        </select>
-     </form>
+            <MDBox py={1.5} pl={3}>
+            <div className="custom-select" >
+      <select>
+        <option value="0">Select Team:</option>
+        <option value="1">Audi</option>
+        <option value="2">BMW</option>
+        <option value="3">Citroen</option>
+        <option value="4">Ford</option>
+        <option value="5">Honda</option>
+        <option value="6">Jaguar</option>
+        <option value="7">Land Rover</option>
+        <option value="8">Mercedes</option>
+        <option value="9">Mini</option>
+        <option value="10">Nissan</option>
+        <option value="11">Toyota</option>
+        <option value="12">Volvo</option>
+      </select>
+    </div>
      </MDBox>
             </MDBox>
               <Tilt className="Tilt" options={{ max : 25, scale: 1.02}}>
